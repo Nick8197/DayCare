@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6919D5E51CA7307700A4018F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E41CA7307700A4018F /* AppDelegate.swift */; };
-		6919D5E71CA7307700A4018F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E61CA7307700A4018F /* ViewController.swift */; };
+		6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E41CA7307700A4018F /* DCAppDelegate.swift */; };
+		6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E61CA7307700A4018F /* DCViewController.swift */; };
 		6919D5EA1CA7307700A4018F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5E81CA7307700A4018F /* Main.storyboard */; };
 		6919D5EC1CA7307700A4018F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5EB1CA7307700A4018F /* Assets.xcassets */; };
 		6919D5EF1CA7307700A4018F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5ED1CA7307700A4018F /* LaunchScreen.storyboard */; };
@@ -16,8 +16,8 @@
 
 /* Begin PBXFileReference section */
 		6919D5E11CA7307700A4018F /* DayCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6919D5E41CA7307700A4018F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6919D5E61CA7307700A4018F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6919D5E41CA7307700A4018F /* DCAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAppDelegate.swift; sourceTree = "<group>"; };
+		6919D5E61CA7307700A4018F /* DCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCViewController.swift; sourceTree = "<group>"; };
 		6919D5E91CA7307700A4018F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6919D5EB1CA7307700A4018F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6919D5EE1CA7307700A4018F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,22 @@
 		6919D5E31CA7307700A4018F /* DayCare */ = {
 			isa = PBXGroup;
 			children = (
-				6919D5E41CA7307700A4018F /* AppDelegate.swift */,
-				6919D5E61CA7307700A4018F /* ViewController.swift */,
+				6919D5E41CA7307700A4018F /* DCAppDelegate.swift */,
+				6919D5E61CA7307700A4018F /* DCViewController.swift */,
+				6919D5F61CA7309B00A4018F /* Supporting Files */,
+			);
+			path = DayCare;
+			sourceTree = "<group>";
+		};
+		6919D5F61CA7309B00A4018F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				6919D5E81CA7307700A4018F /* Main.storyboard */,
 				6919D5EB1CA7307700A4018F /* Assets.xcassets */,
 				6919D5ED1CA7307700A4018F /* LaunchScreen.storyboard */,
 				6919D5F01CA7307800A4018F /* Info.plist */,
 			);
-			path = DayCare;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +98,7 @@
 		6919D5D91CA7307700A4018F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DC;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Tayal, Rishabh";
@@ -135,8 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6919D5E71CA7307700A4018F /* ViewController.swift in Sources */,
-				6919D5E51CA7307700A4018F /* AppDelegate.swift in Sources */,
+				6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */,
+				6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +259,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DayCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -261,9 +272,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DayCare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
