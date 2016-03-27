@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import Parse
 
 class DCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        PFCloud.callFunctionInBackground("hello", withParameters: nil) { (result: AnyObject?, error: NSError?) in
+            print(result)
+        }
+        
+        let obj = PFObject(className: "classNp")
+        obj["a"] = "b"
+        obj.saveInBackground()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
