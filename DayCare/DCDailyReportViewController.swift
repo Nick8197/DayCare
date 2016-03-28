@@ -35,9 +35,15 @@ class DCDailyReportViewController: XLFormViewController {
         super.viewDidLoad()
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelTapped(_:)))
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(doneTapped(_:)))
     }
    
     func cancelTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func doneTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -50,7 +56,7 @@ class DCDailyReportViewController: XLFormViewController {
         form = XLFormDescriptor()
         form.addAsteriskToRequiredRowsTitle = true
         
-        section = XLFormSectionDescriptor.formSectionWithTitle("Describe the reason you are reporting")
+        section = XLFormSectionDescriptor.formSectionWithTitle("Feeding time")
         form.addFormSection(section)
         
         // Reason
