@@ -59,10 +59,20 @@ class DCDailyReportViewController: XLFormViewController {
         section = XLFormSectionDescriptor.formSectionWithTitle("Feeding time")
         form.addFormSection(section)
         
-        // Reason
-        row = XLFormRowDescriptor(tag: Tags.Feeding, rowType: XLFormRowDescriptorTypeTimeInline)
-//        row.cellConfig.setObject("eg. I saw a young girl, no belongings and dressed for summertime instead of rain.", forKey: "textView.placeholder")
+        // Feeding
+        row = XLFormRowDescriptor(tag: Tags.Feeding, rowType: XLFormRowDescriptorTypeTimeInline, title: "Feeding")
+        row.value = NSDate()
         row.required = true
+        section.addFormRow(row)
+        
+        //Napped
+        row = XLFormRowDescriptor(tag: Tags.Napped, rowType: XLFormRowDescriptorTypeTimeInline, title: "Napped")
+        row.required = false
+        section.addFormRow(row)
+        
+        //Diaparing
+        row = XLFormRowDescriptor(tag: Tags.Diaparing, rowType: XLFormRowDescriptorTypeTimeInline, title: "Diaparing")
+        row.required = false
         section.addFormRow(row)
         
 //        section = XLFormSectionDescriptor.formSectionWithTitle("")
