@@ -25,14 +25,38 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="w0N-Im-D7u">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="w0N-Im-D7u" customClass="DCChildCollectionViewCell" customModule="DayCare" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="201" height="195"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="201" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grX-td-r5d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="201" height="195"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUV-ep-tRM">
+                                                    <rect key="frame" x="0.0" y="174" width="201" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="grX-td-r5d" firstAttribute="top" secondItem="w0N-Im-D7u" secondAttribute="top" id="0Lf-YY-DEJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="grX-td-r5d" secondAttribute="bottom" id="8ut-0S-tTH"/>
+                                            <constraint firstItem="zUV-ep-tRM" firstAttribute="leading" secondItem="w0N-Im-D7u" secondAttribute="leading" id="EC8-kR-vRT"/>
+                                            <constraint firstAttribute="bottom" secondItem="zUV-ep-tRM" secondAttribute="bottom" id="QL6-Fs-ONg"/>
+                                            <constraint firstAttribute="trailing" secondItem="grX-td-r5d" secondAttribute="trailing" id="YLT-SG-W3E"/>
+                                            <constraint firstItem="grX-td-r5d" firstAttribute="leading" secondItem="w0N-Im-D7u" secondAttribute="leading" id="chn-he-iih"/>
+                                            <constraint firstAttribute="trailing" secondItem="zUV-ep-tRM" secondAttribute="trailing" id="kcO-Bg-O0A"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="grX-td-r5d" id="tEx-85-yWV"/>
+                                            <outlet property="nameLabel" destination="zUV-ep-tRM" id="KQO-oL-UnV"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
