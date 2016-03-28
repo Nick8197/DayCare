@@ -17,14 +17,17 @@ PODS:
   - Bolts/Tasks (1.6.0)
   - Parse (1.13.0):
     - Bolts/Tasks (~> 1.6)
+  - XLForm (3.1.1)
 
 DEPENDENCIES:
   - AFNetworking
   - Parse
+  - XLForm
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  XLForm: c9ee7e0f859341279bfd894f9589a9d25c23e4df
 
 COCOAPODS: 0.39.0

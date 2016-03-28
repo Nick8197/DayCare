@@ -16,6 +16,9 @@
 		695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B61CA8C1F70041A505 /* DCTabBarController.swift */; };
 		695027B91CA8C2400041A505 /* DCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B81CA8C2400041A505 /* DCSettingsViewController.swift */; };
 		695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */; };
+		69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */; };
+		69EAE7141CA8E40700E716D8 /* DCChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7131CA8E40700E716D8 /* DCChild.swift */; };
+		69EAE7161CA8E40D00E716D8 /* DCClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7151CA8E40D00E716D8 /* DCClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		695027B61CA8C1F70041A505 /* DCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCTabBarController.swift; sourceTree = "<group>"; };
 		695027B81CA8C2400041A505 /* DCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSettingsViewController.swift; sourceTree = "<group>"; };
 		695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChildCollectionViewCell.swift; sourceTree = "<group>"; };
+		69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDailyReportViewController.swift; sourceTree = "<group>"; };
+		69EAE7131CA8E40700E716D8 /* DCChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChild.swift; sourceTree = "<group>"; };
+		69EAE7151CA8E40D00E716D8 /* DCClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCClass.swift; sourceTree = "<group>"; };
 		D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F92EB2E3810470A6C34A2BF4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,10 +73,11 @@
 		6919D5E31CA7307700A4018F /* DayCare */ = {
 			isa = PBXGroup;
 			children = (
+				69EAE7121CA8E3FD00E716D8 /* Models */,
 				6919D5E41CA7307700A4018F /* DCAppDelegate.swift */,
 				695027B61CA8C1F70041A505 /* DCTabBarController.swift */,
-				6919D5E61CA7307700A4018F /* DCViewController.swift */,
-				695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */,
+				69EAE7111CA8E16800E716D8 /* New Group */,
+				69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */,
 				695027B81CA8C2400041A505 /* DCSettingsViewController.swift */,
 				6919D5F61CA7309B00A4018F /* Supporting Files */,
 			);
@@ -86,6 +93,24 @@
 				6919D5F01CA7307800A4018F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69EAE7111CA8E16800E716D8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				6919D5E61CA7307700A4018F /* DCViewController.swift */,
+				695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		69EAE7121CA8E3FD00E716D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69EAE7131CA8E40700E716D8 /* DCChild.swift */,
+				69EAE7151CA8E40D00E716D8 /* DCClass.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		7D1425F701411744A1515723 /* Frameworks */ = {
@@ -229,8 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				695027B91CA8C2400041A505 /* DCSettingsViewController.swift in Sources */,
+				69EAE7141CA8E40700E716D8 /* DCChild.swift in Sources */,
 				6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */,
 				695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */,
+				69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */,
+				69EAE7161CA8E40D00E716D8 /* DCClass.swift in Sources */,
 				695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */,
 				6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */,
 			);

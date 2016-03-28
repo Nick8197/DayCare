@@ -16,6 +16,9 @@ class DCAppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        DCClass.registerSubclass()
+        DCChild.registerSubclass()
+        
         let config = ParseClientConfiguration {
             $0.applicationId = "myAppId"
             $0.clientKey = ""

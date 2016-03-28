@@ -11,25 +11,31 @@ import Parse
 import AFNetworking
 
 class DCViewController: UIViewController {
-
+    
     @IBOutlet var collectionView: UICollectionView!
     
-    var dataArray: [PFObject] = []
+    var dataArray: [DCChild] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        PFCloud.callFunctionInBackground("hello", withParameters: nil) { (result: AnyObject?, error: NSError?) in
-//            print(result)
-//        }
-
-        let query = PFQuery(className: "Child")
-        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) in
-            self.dataArray = objects!
-            self.collectionView.reloadData()
+        let classQuery = PFQuery(className: "Class")
+        classQuery.whereKey("name", equalTo: "Infant1")
+        classQuery.getFirstObjectInBackgroundWithBlock { (classObj: PFObject?, error: NSError?) in
+            if let classObj = classObj as? DCClass {
+                self.title = classObj.name
+                
+                let query = DCChild.query()!
+                query.whereKey("class", equalTo: classObj)
+                query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) in
+                    if let objects = objects as? [DCChild] {
+                        self.dataArray = objects
+                        self.collectionView.reloadData()
+                    }
+                }
+            }
         }
-        
-        collectionView.alwaysBounceVertical = true        
+        collectionView.alwaysBounceVertical = true
     }
 }
 
@@ -44,10 +50,10 @@ extension DCViewController: UICollectionViewDataSource {
         let child = dataArray[indexPath.row]
         
         cell.backgroundColor = .grayColor()
-        if let url = child["image"] as? String {
+        if let url = child.image {
             cell.imageView.setImageWithURL(NSURL(string: url)!)
         }
-        cell.nameLabel.text = child["name"] as? String
+        cell.nameLabel.text = child.name
         
         return cell
     }
@@ -56,5 +62,10 @@ extension DCViewController: UICollectionViewDataSource {
 extension DCViewController: UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("selected " + String(indexPath.row))
+        
+        let dailyReportVC = storyboard?.instantiateViewControllerWithIdentifier("DCDailyReportViewController") as! DCDailyReportViewController
+        let navC = UINavigationController(rootViewController: dailyReportVC)
+        navC.modalPresentationStyle = UIModalPresentationStyle.FormSheet
+        self.presentViewController(navC, animated: true, completion: nil)
     }
 }
