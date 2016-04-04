@@ -52,6 +52,9 @@ class DCDailyReportViewController: XLFormViewController {
         reportObj.diaparing = NSDate()
         reportObj.date = NSDate()
         reportObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+            DCServiceCaller.sendPush("", completion: { (result, error) in
+                print(result)
+            })
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
