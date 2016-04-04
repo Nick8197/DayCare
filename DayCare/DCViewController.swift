@@ -49,7 +49,6 @@ extension DCViewController: UICollectionViewDataSource {
         
         let child = dataArray[indexPath.row]
         
-        cell.backgroundColor = .grayColor()
         if let url = child.image {
             cell.imageView.setImageWithURL(NSURL(string: url)!)
         }
@@ -64,6 +63,7 @@ extension DCViewController: UICollectionViewDelegate {
         print("selected " + String(indexPath.row))
         
         let dailyReportVC = storyboard?.instantiateViewControllerWithIdentifier("DCDailyReportViewController") as! DCDailyReportViewController
+        dailyReportVC.child = dataArray[indexPath.row]
         let navC = UINavigationController(rootViewController: dailyReportVC)
         navC.modalPresentationStyle = UIModalPresentationStyle.FormSheet
         self.presentViewController(navC, animated: true, completion: nil)

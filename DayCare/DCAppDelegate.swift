@@ -18,6 +18,7 @@ class DCAppDelegate: UIResponder, UIApplicationDelegate {
 
         DCClass.registerSubclass()
         DCChild.registerSubclass()
+        DCReport.registerSubclass()
         
         let config = ParseClientConfiguration {
             $0.applicationId = "myAppId"

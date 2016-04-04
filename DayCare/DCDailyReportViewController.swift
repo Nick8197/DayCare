@@ -26,6 +26,8 @@ class DCDailyReportViewController: XLFormViewController {
 //        static let Comments = "comments"
     }
     
+    var child: DCChild!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialForm()
@@ -44,7 +46,14 @@ class DCDailyReportViewController: XLFormViewController {
     }
     
     func doneTapped(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let reportObj = DCReport()
+        reportObj.child = child
+        reportObj.diaparing = NSDate()
+        reportObj.date = NSDate()
+        reportObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     func initialForm() {
@@ -65,13 +74,21 @@ class DCDailyReportViewController: XLFormViewController {
         row.required = true
         section.addFormRow(row)
         
+        section = XLFormSectionDescriptor.formSectionWithTitle("Napped")
+        form.addFormSection(section)
+        
         //Napped
         row = XLFormRowDescriptor(tag: Tags.Napped, rowType: XLFormRowDescriptorTypeTimeInline, title: "Napped")
+        row.value = NSDate()
         row.required = false
         section.addFormRow(row)
         
+        section = XLFormSectionDescriptor.formSectionWithTitle("Diaparing")
+        form.addFormSection(section)
+        
         //Diaparing
         row = XLFormRowDescriptor(tag: Tags.Diaparing, rowType: XLFormRowDescriptorTypeTimeInline, title: "Diaparing")
+        row.value = NSDate()
         row.required = false
         section.addFormRow(row)
         

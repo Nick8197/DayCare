@@ -16,6 +16,7 @@
 		695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B61CA8C1F70041A505 /* DCTabBarController.swift */; };
 		695027B91CA8C2400041A505 /* DCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B81CA8C2400041A505 /* DCSettingsViewController.swift */; };
 		695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */; };
+		69553C891CB22A26007FFEA7 /* DCReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69553C881CB22A26007FFEA7 /* DCReport.swift */; };
 		69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */; };
 		69EAE7141CA8E40700E716D8 /* DCChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7131CA8E40700E716D8 /* DCChild.swift */; };
 		69EAE7161CA8E40D00E716D8 /* DCClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7151CA8E40D00E716D8 /* DCClass.swift */; };
@@ -33,6 +34,7 @@
 		695027B61CA8C1F70041A505 /* DCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCTabBarController.swift; sourceTree = "<group>"; };
 		695027B81CA8C2400041A505 /* DCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSettingsViewController.swift; sourceTree = "<group>"; };
 		695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChildCollectionViewCell.swift; sourceTree = "<group>"; };
+		69553C881CB22A26007FFEA7 /* DCReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCReport.swift; sourceTree = "<group>"; };
 		69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDailyReportViewController.swift; sourceTree = "<group>"; };
 		69EAE7131CA8E40700E716D8 /* DCChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChild.swift; sourceTree = "<group>"; };
 		69EAE7151CA8E40D00E716D8 /* DCClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCClass.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				69EAE7131CA8E40700E716D8 /* DCChild.swift */,
 				69EAE7151CA8E40D00E716D8 /* DCClass.swift */,
+				69553C881CB22A26007FFEA7 /* DCReport.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				69EAE7161CA8E40D00E716D8 /* DCClass.swift in Sources */,
 				695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */,
 				6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */,
+				69553C891CB22A26007FFEA7 /* DCReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

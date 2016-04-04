@@ -12,5 +12,11 @@ class DCChildCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    
+ 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        imageView.layer.cornerRadius = 6
+        imageView.layer.masksToBounds = true
+    }
 }
