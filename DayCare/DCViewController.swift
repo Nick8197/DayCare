@@ -33,6 +33,8 @@ class DCViewController: UIViewController {
                         self.collectionView.reloadData()
                     }
                 }
+            } else {
+                print(error)
             }
         }
         collectionView.alwaysBounceVertical = true
