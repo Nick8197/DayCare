@@ -19,10 +19,14 @@ xcodeproj 'CareTaker/CareTaker.xcodeproj'
 pod 'AFNetworking'
 pod 'Parse'
 pod 'XLForm'
+pod 'Fabric'
+pod 'Crashlytics'
 end
 
 target :DayCareClient do
 xcodeproj 'Parents/DayCareClient.xcodeproj'
 pod 'AFNetworking'
 pod 'Parse'
+pod 'Fabric'
+pod 'Crashlytics'
 end
