@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nqj-JM-9e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="1139"/>
+            <point key="canvasLocation" x="273" y="1657"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="lCd-Il-XjQ">
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuy-M4-C5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="478"/>
+            <point key="canvasLocation" x="273" y="898"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UfN-rg-9Ve">
@@ -52,14 +52,31 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TaN-qQ-WCg"/>
                         <segue destination="af2-Xp-lX3" kind="relationship" relationship="viewControllers" id="cKA-8F-cc5"/>
                         <segue destination="TsA-fD-hkK" kind="relationship" relationship="viewControllers" id="Gig-25-dme"/>
+                        <segue destination="cAi-gt-A5C" kind="relationship" relationship="viewControllers" id="YGE-kx-uWp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmS-8e-G5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-565" y="809"/>
+        </scene>
+        <!--Diary-->
+        <scene sceneID="qm7-hW-zTy">
+            <objects>
+                <navigationController id="cAi-gt-A5C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diary" id="DxZ-p1-CwW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lac-RG-xzu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ngg-WJ-A6F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fE9-Ao-z09" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="176"/>
         </scene>
         <!--Diary-->
         <scene sceneID="tne-QT-ifu">
@@ -78,7 +95,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="boG-YP-5CS">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="boG-YP-5CS" id="7L6-nf-ARO">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -101,12 +118,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Diary" id="fiX-36-RfG"/>
+                    <navigationItem key="navigationItem" id="Vdp-cm-ZtK"/>
                     <connections>
                         <outlet property="tableView" destination="ksE-ge-zAh" id="gGK-PJ-ULN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1001" y="176"/>
         </scene>
     </scenes>
 </document>
