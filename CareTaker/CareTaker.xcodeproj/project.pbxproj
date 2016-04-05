@@ -21,11 +21,13 @@
 		69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */; };
 		69EAE7141CA8E40700E716D8 /* DCChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7131CA8E40700E716D8 /* DCChild.swift */; };
 		69EAE7161CA8E40D00E716D8 /* DCClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7151CA8E40D00E716D8 /* DCClass.swift */; };
+		7D41FF357B36906FB5C97EFE /* Pods_CareTaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E88FDDA27701550678362E /* Pods_CareTaker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12C5336112D8737186407317 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		6919D5E11CA7307700A4018F /* DayCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E88FDDA27701550678362E /* Pods_CareTaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareTaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6919D5E11CA7307700A4018F /* CareTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6919D5E41CA7307700A4018F /* DCAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAppDelegate.swift; sourceTree = "<group>"; };
 		6919D5E61CA7307700A4018F /* DCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCViewController.swift; sourceTree = "<group>"; };
 		6919D5E91CA7307700A4018F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A155F8D54FBA3A9F02B5FF /* Pods.framework in Frameworks */,
+				7D41FF357B36906FB5C97EFE /* Pods_CareTaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +62,7 @@
 		6919D5D81CA7307700A4018F = {
 			isa = PBXGroup;
 			children = (
-				6919D5E31CA7307700A4018F /* DayCare */,
+				6919D5E31CA7307700A4018F /* CareTaker */,
 				6919D5E21CA7307700A4018F /* Products */,
 				9A9856BA0C2E5440969CAF2F /* Pods */,
 				7D1425F701411744A1515723 /* Frameworks */,
@@ -69,12 +72,12 @@
 		6919D5E21CA7307700A4018F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6919D5E11CA7307700A4018F /* DayCare.app */,
+				6919D5E11CA7307700A4018F /* CareTaker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6919D5E31CA7307700A4018F /* DayCare */ = {
+		6919D5E31CA7307700A4018F /* CareTaker */ = {
 			isa = PBXGroup;
 			children = (
 				69EAE7121CA8E3FD00E716D8 /* Models */,
@@ -86,7 +89,7 @@
 				695027B81CA8C2400041A505 /* DCSettingsViewController.swift */,
 				6919D5F61CA7309B00A4018F /* Supporting Files */,
 			);
-			path = DayCare;
+			path = CareTaker;
 			sourceTree = "<group>";
 		};
 		6919D5F61CA7309B00A4018F /* Supporting Files */ = {
@@ -123,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				F92EB2E3810470A6C34A2BF4 /* Pods.framework */,
+				64E88FDDA27701550678362E /* Pods_CareTaker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6919D5E01CA7307700A4018F /* DayCare */ = {
+		6919D5E01CA7307700A4018F /* CareTaker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6919D5F31CA7307800A4018F /* Build configuration list for PBXNativeTarget "DayCare" */;
+			buildConfigurationList = 6919D5F31CA7307800A4018F /* Build configuration list for PBXNativeTarget "CareTaker" */;
 			buildPhases = (
 				DAC179F1FD889D661DEAFC16 /* Check Pods Manifest.lock */,
 				6919D5DD1CA7307700A4018F /* Sources */,
@@ -154,9 +158,9 @@
 			);
 			dependencies = (
 			);
-			name = DayCare;
+			name = CareTaker;
 			productName = DayCare;
-			productReference = 6919D5E11CA7307700A4018F /* DayCare.app */;
+			productReference = 6919D5E11CA7307700A4018F /* CareTaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6919D5DC1CA7307700A4018F /* Build configuration list for PBXProject "DayCare" */;
+			buildConfigurationList = 6919D5DC1CA7307700A4018F /* Build configuration list for PBXProject "CareTaker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -194,7 +198,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6919D5E01CA7307700A4018F /* DayCare */,
+				6919D5E01CA7307700A4018F /* CareTaker */,
 			);
 		};
 /* End PBXProject section */
@@ -225,7 +229,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CABAE658151DC6274D1FC4D5 /* Copy Pods Resources */ = {
@@ -240,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DAC179F1FD889D661DEAFC16 /* Check Pods Manifest.lock */ = {
@@ -390,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = DayCare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CareTaker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
@@ -407,7 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = DayCare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CareTaker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
@@ -420,7 +424,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6919D5DC1CA7307700A4018F /* Build configuration list for PBXProject "DayCare" */ = {
+		6919D5DC1CA7307700A4018F /* Build configuration list for PBXProject "CareTaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6919D5F11CA7307800A4018F /* Debug */,
@@ -429,7 +433,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6919D5F31CA7307800A4018F /* Build configuration list for PBXNativeTarget "DayCare" */ = {
+		6919D5F31CA7307800A4018F /* Build configuration list for PBXNativeTarget "CareTaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6919D5F41CA7307800A4018F /* Debug */,

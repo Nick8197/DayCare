@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DayCare.xcscheme</key>
+		<key>DayCareClient.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6919D5E01CA7307700A4018F</key>
+		<key>69EAE71F1CA976D400E716D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

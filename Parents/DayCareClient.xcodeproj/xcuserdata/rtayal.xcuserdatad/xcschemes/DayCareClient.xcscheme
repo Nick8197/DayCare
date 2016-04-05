@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-               BuildableName = "DayCare.app"
-               BlueprintName = "DayCare"
-               ReferencedContainer = "container:DayCare.xcodeproj">
+               BlueprintIdentifier = "69EAE71F1CA976D400E716D8"
+               BuildableName = "DayCareClient.app"
+               BlueprintName = "DayCareClient"
+               ReferencedContainer = "container:DayCareClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-            BuildableName = "DayCare.app"
-            BlueprintName = "DayCare"
-            ReferencedContainer = "container:DayCare.xcodeproj">
+            BlueprintIdentifier = "69EAE71F1CA976D400E716D8"
+            BuildableName = "DayCareClient.app"
+            BlueprintName = "DayCareClient"
+            ReferencedContainer = "container:DayCareClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-            BuildableName = "DayCare.app"
-            BlueprintName = "DayCare"
-            ReferencedContainer = "container:DayCare.xcodeproj">
+            BlueprintIdentifier = "69EAE71F1CA976D400E716D8"
+            BuildableName = "DayCareClient.app"
+            BlueprintName = "DayCareClient"
+            ReferencedContainer = "container:DayCareClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-            BuildableName = "DayCare.app"
-            BlueprintName = "DayCare"
-            ReferencedContainer = "container:DayCare.xcodeproj">
+            BlueprintIdentifier = "69EAE71F1CA976D400E716D8"
+            BuildableName = "DayCareClient.app"
+            BlueprintName = "DayCareClient"
+            ReferencedContainer = "container:DayCareClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
