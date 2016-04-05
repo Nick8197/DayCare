@@ -107,12 +107,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69EAE7321CA976D400E716D8 /* Build configuration list for PBXNativeTarget "DayCareClient" */;
 			buildPhases = (
-				B5BFC1308EB475C10E81436F /* Check Pods Manifest.lock */,
 				69EAE71C1CA976D400E716D8 /* Sources */,
 				69EAE71D1CA976D400E716D8 /* Frameworks */,
 				69EAE71E1CA976D400E716D8 /* Resources */,
-				E2A4B61DE3EC3139E9979174 /* Embed Pods Frameworks */,
-				2D70E1C49F52CE7339DB103B /* Copy Pods Resources */,
+				C07C8202DA2F94D5A66AA4BD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,37 +174,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D70E1C49F52CE7339DB103B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5BFC1308EB475C10E81436F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E2A4B61DE3EC3139E9979174 /* Embed Pods Frameworks */ = {
+		C07C8202DA2F94D5A66AA4BD /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

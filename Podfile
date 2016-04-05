@@ -12,6 +12,7 @@ target :CareTaker do
 xcodeproj 'CareTaker/CareTaker.xcodeproj'
 pod 'AFNetworking'
 pod 'Parse'
+pod 'XLForm'
 end
 
 target :DayCareClient do
