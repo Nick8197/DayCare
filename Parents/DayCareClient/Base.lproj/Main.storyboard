@@ -52,9 +52,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TaN-qQ-WCg"/>
                         <segue destination="af2-Xp-lX3" kind="relationship" relationship="viewControllers" id="cKA-8F-cc5"/>
                         <segue destination="TsA-fD-hkK" kind="relationship" relationship="viewControllers" id="Gig-25-dme"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TaN-qQ-WCg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmS-8e-G5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,9 +72,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ksE-ge-zAh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="boG-YP-5CS">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="boG-YP-5CS" id="7L6-nf-ARO">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DGX-UQ-qa1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="otI-q9-uZN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ksE-ge-zAh" secondAttribute="bottom" id="KS9-5I-cqJ"/>
+                            <constraint firstItem="ksE-ge-zAh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M97-8H-erU"/>
+                            <constraint firstAttribute="trailing" secondItem="ksE-ge-zAh" secondAttribute="trailing" id="OTI-dS-xg0"/>
+                            <constraint firstItem="ksE-ge-zAh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pKa-s1-JFr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Diary" id="fiX-36-RfG"/>
+                    <connections>
+                        <outlet property="tableView" destination="ksE-ge-zAh" id="gGK-PJ-ULN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

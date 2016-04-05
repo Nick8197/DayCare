@@ -7,6 +7,12 @@ inhibit_all_warnings!
 
 xcodeproj 'CareTaker/CareTaker.xcodeproj'
 xcodeproj 'Parents/DayCareClient.xcodeproj'
+xcodeproj 'Common/Common.xcodeproj'
+
+target :Common do
+xcodeproj 'Common/Common.xcodeproj'
+pod 'Parse'
+end
 
 target :CareTaker do
 xcodeproj 'CareTaker/CareTaker.xcodeproj'

@@ -8,12 +8,12 @@
 
 import Parse
 
-class DCChild: PFObject, PFSubclassing {
+public class DCChild: PFObject, PFSubclassing {
     
-    static func parseClassName() -> String {
+    public static func parseClassName() -> String {
         return "Child"
     }
     
-    @NSManaged var name: String
-    @NSManaged var image: String?
+    @NSManaged public var name: String
+    @NSManaged public var image: String?
 }

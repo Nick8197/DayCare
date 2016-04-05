@@ -47,7 +47,7 @@ class DCDailyReportViewController: XLFormViewController {
     
     func doneTapped(sender: AnyObject) {
         
-        let reportObj = DCReport()
+        let reportObj = DCDiary()
         reportObj.child = child
         reportObj.diaparing = NSDate()
         reportObj.date = NSDate()

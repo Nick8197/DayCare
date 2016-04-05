@@ -11,6 +11,8 @@ import Parse
 
 class DiaryViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,3 +24,18 @@ class DiaryViewController: UIViewController {
     }
 }
 
+extension DiaryViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        cell?.textLabel?.text = "a"
+        return cell!
+    }
+}
+
+extension DiaryViewController: UITableViewDelegate {
+    
+}
