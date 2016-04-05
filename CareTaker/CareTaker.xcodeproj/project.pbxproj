@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17A155F8D54FBA3A9F02B5FF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92EB2E3810470A6C34A2BF4 /* Pods.framework */; };
 		6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E41CA7307700A4018F /* DCAppDelegate.swift */; };
 		6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E61CA7307700A4018F /* DCViewController.swift */; };
 		6919D5EA1CA7307700A4018F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5E81CA7307700A4018F /* Main.storyboard */; };
@@ -26,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		12C5336112D8737186407317 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.release.xcconfig"; sourceTree = "<group>"; };
 		64E88FDDA27701550678362E /* Pods_CareTaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareTaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6919D5E11CA7307700A4018F /* CareTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6919D5E41CA7307700A4018F /* DCAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +42,7 @@
 		69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDailyReportViewController.swift; sourceTree = "<group>"; };
 		69EAE7131CA8E40700E716D8 /* DCChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChild.swift; sourceTree = "<group>"; };
 		69EAE7151CA8E40D00E716D8 /* DCClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCClass.swift; sourceTree = "<group>"; };
+		6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.debug.xcconfig"; sourceTree = "<group>"; };
 		D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F92EB2E3810470A6C34A2BF4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -51,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A155F8D54FBA3A9F02B5FF /* Pods.framework in Frameworks */,
 				7D41FF357B36906FB5C97EFE /* Pods_CareTaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +136,8 @@
 			children = (
 				D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */,
 				12C5336112D8737186407317 /* Pods.release.xcconfig */,
+				6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */,
+				42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -357,7 +359,7 @@
 		};
 		6919D5F41CA7307800A4018F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -374,7 +376,7 @@
 		};
 		6919D5F51CA7307800A4018F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12C5336112D8737186407317 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
