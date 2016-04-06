@@ -10,6 +10,8 @@
 		690056AC1CB4B7750090163E /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056AB1CB4B7750090163E /* RoutineViewController.swift */; };
 		690056AE1CB4B9690090163E /* SubmitRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */; };
 		690056B21CB4BE240090163E /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690056B11CB4BE240090163E /* Common.framework */; };
+		690056B71CB4BF4C0090163E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056B51CB4BF4C0090163E /* LoginViewController.swift */; };
+		690056B81CB4BF4C0090163E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690056B61CB4BF4C0090163E /* LoginViewController.xib */; };
 		69EAE7241CA976D400E716D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7231CA976D400E716D8 /* AppDelegate.swift */; };
 		69EAE7261CA976D400E716D8 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7251CA976D400E716D8 /* DiaryViewController.swift */; };
 		69EAE7291CA976D400E716D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE7271CA976D400E716D8 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		690056AB1CB4B7750090163E /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitRoutineViewController.swift; sourceTree = "<group>"; };
 		690056B11CB4BE240090163E /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Common.framework; path = "../Common/build/Debug-iphoneos/Common.framework"; sourceTree = "<group>"; };
+		690056B51CB4BF4C0090163E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		690056B61CB4BF4C0090163E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		69A14A841CB4A5CF0005E88B /* DayCareClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayCareClient-Bridging-Header.h"; sourceTree = "<group>"; };
 		69EAE7201CA976D400E716D8 /* DayCareClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCareClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EAE7231CA976D400E716D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		690056B91CB4BF500090163E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				690056B51CB4BF4C0090163E /* LoginViewController.swift */,
+				690056B61CB4BF4C0090163E /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		69EAE7171CA976D400E716D8 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				69EAE7231CA976D400E716D8 /* AppDelegate.swift */,
+				690056B91CB4BF500090163E /* Login */,
 				69EAE7251CA976D400E716D8 /* DiaryViewController.swift */,
 				690056AB1CB4B7750090163E /* RoutineViewController.swift */,
 				690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */,
@@ -181,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690056B81CB4BF4C0090163E /* LoginViewController.xib in Resources */,
 				69EAE72E1CA976D400E716D8 /* LaunchScreen.storyboard in Resources */,
 				69EAE72B1CA976D400E716D8 /* Assets.xcassets in Resources */,
 				69EAE7291CA976D400E716D8 /* Main.storyboard in Resources */,
@@ -241,6 +256,7 @@
 				69EAE7261CA976D400E716D8 /* DiaryViewController.swift in Sources */,
 				690056AC1CB4B7750090163E /* RoutineViewController.swift in Sources */,
 				69EAE7241CA976D400E716D8 /* AppDelegate.swift in Sources */,
+				690056B71CB4BF4C0090163E /* LoginViewController.swift in Sources */,
 				690056AE1CB4B9690090163E /* SubmitRoutineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

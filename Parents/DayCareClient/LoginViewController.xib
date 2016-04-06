@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DayCareClient" customModuleProvider="target">
+            <connections>
+                <outlet property="passwordTextfield" destination="YXp-ep-mRU" id="h1E-ul-3e8"/>
+                <outlet property="usernameTextfield" destination="Rzw-7O-CRi" id="u2M-9D-1Nj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-7O-CRi">
+                    <rect key="frame" x="40" y="215" width="520" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-ep-mRU">
+                    <rect key="frame" x="40" y="285" width="520" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuy-L8-4eW">
+                    <rect key="frame" x="281" y="355" width="38" height="30"/>
+                    <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="loginTapped:" destination="-1" eventType="touchUpInside" id="BF7-uB-z0N"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Rzw-7O-CRi" firstAttribute="centerX" secondItem="YXp-ep-mRU" secondAttribute="centerX" id="3Va-4y-Lo4"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="51g-C5-n9n"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="centerX" secondItem="xuy-L8-4eW" secondAttribute="centerX" id="AVw-SF-wdB"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HhY-3J-6AV"/>
+                <constraint firstAttribute="trailing" secondItem="YXp-ep-mRU" secondAttribute="trailing" constant="40" id="Jei-em-Voy"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="top" secondItem="Rzw-7O-CRi" secondAttribute="bottom" constant="40" id="S1g-i9-zpP"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="leading" secondItem="Rzw-7O-CRi" secondAttribute="leading" id="dO8-9x-Xrn"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fRI-NZ-k3V"/>
+                <constraint firstItem="xuy-L8-4eW" firstAttribute="top" secondItem="YXp-ep-mRU" secondAttribute="bottom" constant="40" id="k7O-LS-XNk"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="trailing" secondItem="Rzw-7O-CRi" secondAttribute="trailing" id="lQ6-dO-Wia"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
