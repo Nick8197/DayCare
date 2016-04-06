@@ -60,7 +60,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0yQ-zy-KBA" id="DiX-zi-dyM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -70,12 +70,22 @@
                                     <outlet property="delegate" destination="af2-Xp-lX3" id="HAT-SU-iJ7"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6X-UA-iun">
+                                <rect key="frame" x="0.0" y="521" width="600" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submitRoutineTapped:" destination="af2-Xp-lX3" eventType="touchUpInside" id="deW-Xa-a0M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="R6X-UA-iun" firstAttribute="trailing" secondItem="Q93-iL-vom" secondAttribute="trailing" id="36t-Ic-Hkn"/>
                             <constraint firstItem="Q93-iL-vom" firstAttribute="top" secondItem="asd-ho-o0D" secondAttribute="top" id="Jpx-8u-A7L"/>
                             <constraint firstItem="Q93-iL-vom" firstAttribute="leading" secondItem="asd-ho-o0D" secondAttribute="leading" id="LHl-Ei-UgM"/>
                             <constraint firstAttribute="trailing" secondItem="Q93-iL-vom" secondAttribute="trailing" id="NzU-YG-BHs"/>
+                            <constraint firstItem="3bf-oK-T1b" firstAttribute="top" secondItem="R6X-UA-iun" secondAttribute="bottom" id="Vfq-id-XkD"/>
+                            <constraint firstItem="R6X-UA-iun" firstAttribute="leading" secondItem="Q93-iL-vom" secondAttribute="leading" id="dUe-UM-2Qd"/>
                             <constraint firstAttribute="bottom" secondItem="Q93-iL-vom" secondAttribute="bottom" id="mmY-G6-a5T"/>
                         </constraints>
                     </view>
@@ -88,6 +98,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuy-M4-C5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1001" y="858"/>
+        </scene>
+        <!--Submit Routine View Controller-->
+        <scene sceneID="B88-Wv-wDd">
+            <objects>
+                <viewController storyboardIdentifier="SubmitRoutineViewController" id="nb5-GH-NKG" customClass="SubmitRoutineViewController" customModule="DayCareClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YpP-u7-ffk"/>
+                        <viewControllerLayoutGuide type="bottom" id="jmx-XU-gZj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ou-O6-4Za">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9Q-ib-6hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UfN-rg-9Ve">

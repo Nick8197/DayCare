@@ -19,6 +19,11 @@ class RoutineViewController: UIViewController {
         
         dataArray.append("a")
     }
+    
+    @IBAction func submitRoutineTapped(sender: AnyObject) {
+        let submitReportVC = storyboard?.instantiateViewControllerWithIdentifier("SubmitRoutineViewController") as! SubmitRoutineViewController
+        self.navigationController?.pushViewController(submitReportVC, animated: true)
+    }
 }
 
 extension RoutineViewController: UITableViewDataSource {
