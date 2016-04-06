@@ -51,7 +51,9 @@ platform :ios do
       scheme: "DayCareClient",
       use_legacy_build_api: true
       )
-    crashlytics(crashlytics_path: "./Pods/Crashlytics/iOS/Crashlytics.framework", notifications: notify_testers)
+    crashlytics(api_token: "02d3f7db22ac1a3e538528547a694d5230eb8278",
+      build_secret: "af6ede98bc0742057c556b0ed733e4c57ae435cd7cc81f516bb2b4e456b7e234",
+      crashlytics_path: "./Pods/Crashlytics/iOS/Crashlytics.framework", notifications: true, emails: ["rtayal11@gmail.com"])
   end
 
   desc "Deploy a new version to the App Store"
