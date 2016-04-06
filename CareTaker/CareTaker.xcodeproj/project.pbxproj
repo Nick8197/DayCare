@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E41CA7307700A4018F /* DCAppDelegate.swift */; };
+		6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E61CA7307700A4018F /* DCViewController.swift */; };
+		6919D5EA1CA7307700A4018F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5E81CA7307700A4018F /* Main.storyboard */; };
+		6919D5EC1CA7307700A4018F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5EB1CA7307700A4018F /* Assets.xcassets */; };
+		6919D5EF1CA7307700A4018F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5ED1CA7307700A4018F /* LaunchScreen.storyboard */; };
+		695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B61CA8C1F70041A505 /* DCTabBarController.swift */; };
+		695027B91CA8C2400041A505 /* DCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B81CA8C2400041A505 /* DCSettingsViewController.swift */; };
+		695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */; };
+		69553C8B1CB2AC96007FFEA7 /* DCServiceCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */; };
+		6957EEE31CB4023200C7A857 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6957EEE21CB4023200C7A857 /* Common.framework */; };
+		69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */; };
+		7D41FF357B36906FB5C97EFE /* Pods_CareTaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E88FDDA27701550678362E /* Pods_CareTaker.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12C5336112D8737186407317 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.release.xcconfig"; sourceTree = "<group>"; };
+		64E88FDDA27701550678362E /* Pods_CareTaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareTaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6919D5E11CA7307700A4018F /* CareTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6919D5E41CA7307700A4018F /* DCAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAppDelegate.swift; sourceTree = "<group>"; };
+		6919D5E61CA7307700A4018F /* DCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCViewController.swift; sourceTree = "<group>"; };
+		6919D5E91CA7307700A4018F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6919D5EB1CA7307700A4018F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6919D5EE1CA7307700A4018F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6919D5F01CA7307800A4018F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		695027B61CA8C1F70041A505 /* DCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCTabBarController.swift; sourceTree = "<group>"; };
+		695027B81CA8C2400041A505 /* DCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSettingsViewController.swift; sourceTree = "<group>"; };
+		695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChildCollectionViewCell.swift; sourceTree = "<group>"; };
+		69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCServiceCaller.swift; sourceTree = "<group>"; };
+		6957EEE21CB4023200C7A857 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Common.framework; path = "../Common/build/Debug-iphoneos/Common.framework"; sourceTree = "<group>"; };
+		6957EEE41CB402AD00C7A857 /* CareTaker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CareTaker-Bridging-Header.h"; sourceTree = "<group>"; };
+		69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDailyReportViewController.swift; sourceTree = "<group>"; };
+		6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.debug.xcconfig"; sourceTree = "<group>"; };
+		D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F92EB2E3810470A6C34A2BF4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6919D5DE1CA7307700A4018F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6957EEE31CB4023200C7A857 /* Common.framework in Frameworks */,
+				7D41FF357B36906FB5C97EFE /* Pods_CareTaker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6919D5D81CA7307700A4018F = {
+			isa = PBXGroup;
+			children = (
+				6919D5E31CA7307700A4018F /* CareTaker */,
+				6919D5E21CA7307700A4018F /* Products */,
+				9A9856BA0C2E5440969CAF2F /* Pods */,
+				7D1425F701411744A1515723 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6919D5E21CA7307700A4018F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6919D5E11CA7307700A4018F /* CareTaker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6919D5E31CA7307700A4018F /* CareTaker */ = {
+			isa = PBXGroup;
+			children = (
+				69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */,
+				6919D5E41CA7307700A4018F /* DCAppDelegate.swift */,
+				695027B61CA8C1F70041A505 /* DCTabBarController.swift */,
+				69EAE7111CA8E16800E716D8 /* Child View Controller */,
+				69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */,
+				695027B81CA8C2400041A505 /* DCSettingsViewController.swift */,
+				6919D5F61CA7309B00A4018F /* Supporting Files */,
+			);
+			path = CareTaker;
+			sourceTree = "<group>";
+		};
+		6919D5F61CA7309B00A4018F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6919D5E81CA7307700A4018F /* Main.storyboard */,
+				6919D5EB1CA7307700A4018F /* Assets.xcassets */,
+				6919D5ED1CA7307700A4018F /* LaunchScreen.storyboard */,
+				6919D5F01CA7307800A4018F /* Info.plist */,
+				6957EEE41CB402AD00C7A857 /* CareTaker-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69EAE7111CA8E16800E716D8 /* Child View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6919D5E61CA7307700A4018F /* DCViewController.swift */,
+				695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */,
+			);
+			name = "Child View Controller";
+			sourceTree = "<group>";
+		};
+		7D1425F701411744A1515723 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6957EEE21CB4023200C7A857 /* Common.framework */,
+				F92EB2E3810470A6C34A2BF4 /* Pods.framework */,
+				64E88FDDA27701550678362E /* Pods_CareTaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A9856BA0C2E5440969CAF2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */,
+				12C5336112D8737186407317 /* Pods.release.xcconfig */,
+				6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */,
+				42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6919D5E01CA7307700A4018F /* CareTaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6919D5F31CA7307800A4018F /* Build configuration list for PBXNativeTarget "CareTaker" */;
+			buildPhases = (
+				6919D5DD1CA7307700A4018F /* Sources */,
+				6919D5DE1CA7307700A4018F /* Frameworks */,
+				6919D5DF1CA7307700A4018F /* Resources */,
+				9AFB17BC4684D680E507D6A6 /* Embed Pods Frameworks */,
+				6957EEE81CB4106A00C7A857 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CareTaker;
+			productName = DayCare;
+			productReference = 6919D5E11CA7307700A4018F /* CareTaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6919D5D91CA7307700A4018F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DC;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Tayal, Rishabh";
+				TargetAttributes = {
+					6919D5E01CA7307700A4018F = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = CEBY93VF85;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6919D5DC1CA7307700A4018F /* Build configuration list for PBXProject "CareTaker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6919D5D81CA7307700A4018F;
+			productRefGroup = 6919D5E21CA7307700A4018F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6919D5E01CA7307700A4018F /* CareTaker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6919D5DF1CA7307700A4018F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6919D5EF1CA7307700A4018F /* LaunchScreen.storyboard in Resources */,
+				6919D5EC1CA7307700A4018F /* Assets.xcassets in Resources */,
+				6919D5EA1CA7307700A4018F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6957EEE81CB4106A00C7A857 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 02d3f7db22ac1a3e538528547a694d5230eb8278 af6ede98bc0742057c556b0ed733e4c57ae435cd7cc81f516bb2b4e456b7e234";
+		};
+		9AFB17BC4684D680E507D6A6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6919D5DD1CA7307700A4018F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				695027B91CA8C2400041A505 /* DCSettingsViewController.swift in Sources */,
+				6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */,
+				69553C8B1CB2AC96007FFEA7 /* DCServiceCaller.swift in Sources */,
+				695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */,
+				69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */,
+				695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */,
+				6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6919D5E81CA7307700A4018F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6919D5E91CA7307700A4018F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6919D5ED1CA7307700A4018F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6919D5EE1CA7307700A4018F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6919D5F11CA7307800A4018F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6919D5F21CA7307800A4018F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6919D5F41CA7307800A4018F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/CareTaker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CareTaker/CareTaker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		6919D5F51CA7307800A4018F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/CareTaker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CareTaker/CareTaker-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6919D5DC1CA7307700A4018F /* Build configuration list for PBXProject "CareTaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6919D5F11CA7307800A4018F /* Debug */,
+				6919D5F21CA7307800A4018F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6919D5F31CA7307800A4018F /* Build configuration list for PBXNativeTarget "CareTaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6919D5F41CA7307800A4018F /* Debug */,
+				6919D5F51CA7307800A4018F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6919D5D91CA7307700A4018F /* Project object */;
+}

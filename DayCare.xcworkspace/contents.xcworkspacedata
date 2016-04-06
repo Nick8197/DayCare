@@ -2,7 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DayCare.xcodeproj">
+      location = "group:Common/Common.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CareTaker/CareTaker.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Parents/DayCareClient.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
