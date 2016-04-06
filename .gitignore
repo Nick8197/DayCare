@@ -1,3 +1,7 @@
 Pods/
 
 *.xcbkptlist
+
+DayCareClient.app.dSYM.zip
+
+DayCareClient.ipa
