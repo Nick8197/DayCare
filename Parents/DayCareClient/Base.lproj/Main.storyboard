@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KUh-R3-qEp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Settings-->
@@ -21,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="273" y="1639"/>
         </scene>
-        <!--Item 2-->
+        <!--Settings View Controller-->
         <scene sceneID="VlU-1B-K8b">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="TsA-fD-hkK" customClass="SettingsViewController" customModule="DayCareClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,10 +33,34 @@
                     <view key="view" contentMode="scaleToFill" id="HKC-0W-CuP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVM-w2-6A4">
+                                <rect key="frame" x="279" y="274" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71w-QB-Z6k">
+                                <rect key="frame" x="240" y="114" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="71w-QB-Z6k" secondAttribute="height" id="VH7-LS-EUb"/>
+                                    <constraint firstAttribute="width" constant="120" id="YCt-tk-Csh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SVM-w2-6A4" firstAttribute="top" secondItem="71w-QB-Z6k" secondAttribute="bottom" constant="40" id="2cr-yx-mN6"/>
+                            <constraint firstItem="71w-QB-Z6k" firstAttribute="top" secondItem="bhr-9A-2Pi" secondAttribute="bottom" constant="50" id="PAg-bY-E10"/>
+                            <constraint firstItem="SVM-w2-6A4" firstAttribute="centerX" secondItem="71w-QB-Z6k" secondAttribute="centerX" id="ar1-Nd-Gb7"/>
+                            <constraint firstItem="71w-QB-Z6k" firstAttribute="centerX" secondItem="HKC-0W-CuP" secondAttribute="centerX" id="cVy-0o-YA2"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="7cB-aO-dq0"/>
                     <navigationItem key="navigationItem" id="eZx-Bu-FTd"/>
+                    <connections>
+                        <outlet property="childImageView" destination="71w-QB-Z6k" id="nOZ-VV-AKz"/>
+                        <outlet property="childNameLabel" destination="SVM-w2-6A4" id="zJJ-zI-Gin"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nqj-JM-9e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

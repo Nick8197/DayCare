@@ -8,9 +8,10 @@
 
 import UIKit
 import XLForm
+import Parse
 
 class SubmitRoutineViewController: XLFormViewController {
-
+    
     private struct Tags {
         static let Feeding = "feeding"
         static let Napped = "napped"
@@ -31,6 +32,12 @@ class SubmitRoutineViewController: XLFormViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialForm()
+        let user = User.currentUser()
+        user?.child.fetchIfNeededInBackgroundWithBlock({ (child: PFObject?, error: NSError?) in
+            self.child = child as! DCChild
+            print(self.child.name)
+        })
+        
     }
     
     override func viewDidLoad() {
@@ -47,13 +54,14 @@ class SubmitRoutineViewController: XLFormViewController {
     
     func doneTapped(sender: AnyObject) {
         
-//        let reportObj = DCDiary()
-//        reportObj.child = child
-//        reportObj.diaparing = NSDate()
-//        reportObj.date = NSDate()
-//        reportObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
-            self.dismissViewControllerAnimated(true, completion: nil)
-//        }
+        let reportObj = DCDiary()
+        reportObj.child = child
+        reportObj.diaparing = NSDate()
+        reportObj.date = NSDate()
+        reportObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+//            self.dismissViewControllerAnimated(true, completion: nil)
+            self.navigationController?.popViewControllerAnimated(true)
+        }
     }
     
     func initialForm() {
@@ -135,7 +143,7 @@ class SubmitRoutineViewController: XLFormViewController {
         //
         //        section = XLFormSectionDescriptor.formSectionWithTitle("Comments")
         //        form.addFormSection(section)
-        //        
+        //
         //        // Notes
         //        row = XLFormRowDescriptor(tag: Tags.Comments, rowType: XLFormRowDescriptorTypeTextView)
         //        row.cellConfigAtConfigure["textView.placeholder"] = "Comments"
@@ -143,5 +151,5 @@ class SubmitRoutineViewController: XLFormViewController {
         
         self.form = form
     }
-
+    
 }

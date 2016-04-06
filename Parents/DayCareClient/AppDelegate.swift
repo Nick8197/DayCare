@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         DCDiary.registerSubclass()
         DCChild.registerSubclass()
+        User.registerSubclass()
         
         let config = ParseClientConfiguration {
             $0.applicationId = "myAppId"
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(config)
  
-        if PFUser.currentUser() != nil {
+        if User.currentUser() != nil {
             showTabView()
         } else {
             showLoginView()

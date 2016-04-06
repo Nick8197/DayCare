@@ -8,11 +8,8 @@
 
 import Parse
 
-class User: PFObject, PFSubclassing {
-
-    static func parseClassName() -> String {
-        return "_User"
-    }
+class User: PFUser {
     
     @NSManaged var child: DCChild
+    
 }

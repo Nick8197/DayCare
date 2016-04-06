@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground(usernameTextfield.text!, password: passwordTextfield.text!) { (user: PFUser?, error: NSError?) in
+        User.logInWithUsernameInBackground(usernameTextfield.text!, password: passwordTextfield.text!) { (user: PFUser?, error: NSError?) in
             if let _ = user {
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 appDelegate.showTabView()
