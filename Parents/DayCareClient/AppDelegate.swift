@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Fabric.with([Crashlytics.self])
 
+        DCDiary.registerSubclass()
+        DCChild.registerSubclass()
+        
         let config = ParseClientConfiguration {
             $0.applicationId = "myAppId"
             $0.clientKey = ""

@@ -19,6 +19,7 @@ class DiaryViewController: UIViewController {
         super.viewDidLoad()
         
         let query = DCDiary.query()
+        query?.includeKey("child")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
             if let objects = objects as? [DCDiary] {
                 self.dataArray = objects
@@ -38,6 +39,7 @@ extension DiaryViewController: UITableViewDataSource {
         
         let object = dataArray[indexPath.row]
         cell?.textLabel?.text = object.child.name
+        cell?.detailTextLabel?.text = object.diaparing.description
         
         return cell!
     }
