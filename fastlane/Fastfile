@@ -43,6 +43,12 @@ platform :ios do
     # You can also use other beta testing services here (run `fastlane actions`)
   end
 
+  desc "Build and distribute build to Crashlytics"
+  lane :crashlytics do
+    gym(scheme: "DayCareClient")
+    crashlytics(crashlytics_path: "./Pods/Crashlytics/iOS/Crashlytics.framework/")
+  end
+
   desc "Deploy a new version to the App Store"
   lane :appstore do
     # match(type: "appstore")

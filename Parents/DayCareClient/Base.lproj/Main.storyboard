@@ -4,10 +4,27 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="Mbn-gc-DAx">
+            <objects>
+                <navigationController id="ICf-tQ-kCc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="1Et-sL-Ula"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6x5-oy-6EQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TsA-fD-hkK" kind="relationship" relationship="rootViewController" id="FMf-lB-ikU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbQ-gW-N2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="1639"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="VlU-1B-K8b">
             <objects>
-                <viewController id="TsA-fD-hkK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="TsA-fD-hkK" customClass="SettingsViewController" customModule="DayCareClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bhr-9A-2Pi"/>
                         <viewControllerLayoutGuide type="bottom" id="gcC-6K-QXF"/>
@@ -18,10 +35,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="7cB-aO-dq0"/>
+                    <navigationItem key="navigationItem" id="eZx-Bu-FTd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nqj-JM-9e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="1657"/>
+            <point key="canvasLocation" x="1001" y="1639"/>
         </scene>
         <!--Routine-->
         <scene sceneID="bKb-Xg-bXd">
@@ -129,7 +147,7 @@
                     <connections>
                         <segue destination="cAi-gt-A5C" kind="relationship" relationship="viewControllers" id="YGE-kx-uWp"/>
                         <segue destination="d3K-9L-Quh" kind="relationship" relationship="viewControllers" id="iip-Ic-diW"/>
-                        <segue destination="TsA-fD-hkK" kind="relationship" relationship="viewControllers" id="Gig-25-dme"/>
+                        <segue destination="ICf-tQ-kCc" kind="relationship" relationship="viewControllers" id="CU5-Jb-lo9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmS-8e-G5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
