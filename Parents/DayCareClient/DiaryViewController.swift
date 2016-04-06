@@ -10,28 +10,35 @@ import UIKit
 import Parse
 
 class DiaryViewController: UIViewController {
-
+    
     @IBOutlet var tableView: UITableView!
+    
+    var dataArray: [DCDiary] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        PFCloud.callFunctionInBackground("notification", withParameters: nil) { (result: AnyObject?, error: NSError?) in
-//            completion(result: result, error: error)
-            print(error)
-        }
-
+        let query = DCDiary.query()
+        query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
+            if let objects = objects as? [DCDiary] {
+                self.dataArray = objects
+                self.tableView.reloadData()
+            }
+        })
     }
 }
 
 extension DiaryViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return dataArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        cell?.textLabel?.text = "a"
+        
+        let object = dataArray[indexPath.row]
+        cell?.textLabel?.text = object.child.name
+        
         return cell!
     }
 }

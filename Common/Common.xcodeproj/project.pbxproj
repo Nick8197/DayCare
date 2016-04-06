@@ -60,8 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				6957EEDB1CB401E400C7A857 /* Models */,
-				6957EED31CB401DC00C7A857 /* Common.h */,
-				6957EED51CB401DC00C7A857 /* Info.plist */,
+				69A14A831CB4A5670005E88B /* Supporting Files */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -74,6 +73,15 @@
 				6957EEDE1CB401EE00C7A857 /* DCDiary.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		69A14A831CB4A5670005E88B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6957EED31CB401DC00C7A857 /* Common.h */,
+				6957EED51CB401DC00C7A857 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9F977479972FB372540B3EC3 /* Frameworks */ = {
