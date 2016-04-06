@@ -37,15 +37,14 @@ class SubmitRoutineViewController: XLFormViewController {
             self.child = child as! DCChild
             print(self.child.name)
         })
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancelTapped:")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(SubmitRoutineViewController.cancelTapped(_:)))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: "doneTapped:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(SubmitRoutineViewController.doneTapped(_:)))
     }
     
     func cancelTapped(sender: AnyObject) {
@@ -150,6 +149,5 @@ class SubmitRoutineViewController: XLFormViewController {
         //        section.addFormRow(row)
         
         self.form = form
-    }
-    
+    }    
 }

@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		690056AC1CB4B7750090163E /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056AB1CB4B7750090163E /* RoutineViewController.swift */; };
 		690056AE1CB4B9690090163E /* SubmitRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */; };
-		690056B21CB4BE240090163E /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690056B11CB4BE240090163E /* Common.framework */; };
 		690056B71CB4BF4C0090163E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056B51CB4BF4C0090163E /* LoginViewController.swift */; };
 		690056B81CB4BF4C0090163E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690056B61CB4BF4C0090163E /* LoginViewController.xib */; };
+		69B49CE21CB566AB001099B7 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B49CE01CB566AB001099B7 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69EAE7241CA976D400E716D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7231CA976D400E716D8 /* AppDelegate.swift */; };
 		69EAE7261CA976D400E716D8 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7251CA976D400E716D8 /* DiaryViewController.swift */; };
 		69EAE7291CA976D400E716D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE7271CA976D400E716D8 /* Main.storyboard */; };
@@ -22,15 +22,29 @@
 		C995086F388F5D39578F9F0E /* Pods_DayCareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		69B49CE31CB566AB001099B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				69B49CE21CB566AB001099B7 /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E5C8889C014CBF9A01A4975 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1BEA28516BFFB2D14E3197AB /* Pods-DayCareClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayCareClient.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient.debug.xcconfig"; sourceTree = "<group>"; };
 		690056AB1CB4B7750090163E /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitRoutineViewController.swift; sourceTree = "<group>"; };
-		690056B11CB4BE240090163E /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Common.framework; path = "../Common/build/Debug-iphoneos/Common.framework"; sourceTree = "<group>"; };
 		690056B51CB4BF4C0090163E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		690056B61CB4BF4C0090163E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		69A14A841CB4A5CF0005E88B /* DayCareClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayCareClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		69B49CE01CB566AB001099B7 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Common.framework; path = "/Users/rtayal/Library/Developer/Xcode/DerivedData/DayCare-bxgajivugyprmjhldjencqjdkrid/Build/Products/Debug-iphoneos/Common.framework"; sourceTree = "<absolute>"; };
 		69EAE7201CA976D400E716D8 /* DayCareClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCareClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EAE7231CA976D400E716D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69EAE7251CA976D400E716D8 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +56,6 @@
 		69F82BDA1CB4CC750035E6A9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayCareClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04F03D4FB89EA47F415401E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F1F84AB3E6B94CAEF9C3E56E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F764C5D0379C724DADC7CBAC /* Pods-DayCareClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayCareClient.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690056B21CB4BE240090163E /* Common.framework in Frameworks */,
 				C995086F388F5D39578F9F0E /* Pods_DayCareClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,8 +139,7 @@
 		DDCC0558879A8572A39B7B76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				690056B11CB4BE240090163E /* Common.framework */,
-				F1F84AB3E6B94CAEF9C3E56E /* Pods.framework */,
+				69B49CE01CB566AB001099B7 /* Common.framework */,
 				AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */,
 			);
 			name = Frameworks;
@@ -147,6 +158,7 @@
 				C07C8202DA2F94D5A66AA4BD /* Embed Pods Frameworks */,
 				6957EEE91CB4115500C7A857 /* ShellScript */,
 				690056AF1CB4BD260090163E /* ShellScript */,
+				69B49CE31CB566AB001099B7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

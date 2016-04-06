@@ -16,15 +16,27 @@
 		695027B91CA8C2400041A505 /* DCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B81CA8C2400041A505 /* DCSettingsViewController.swift */; };
 		695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */; };
 		69553C8B1CB2AC96007FFEA7 /* DCServiceCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */; };
-		6957EEE31CB4023200C7A857 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6957EEE21CB4023200C7A857 /* Common.framework */; };
+		69B49CE61CB566E4001099B7 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B49CE41CB566E4001099B7 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */; };
-		7D41FF357B36906FB5C97EFE /* Pods_CareTaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E88FDDA27701550678362E /* Pods_CareTaker.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		69B49CE71CB566E4001099B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				69B49CE61CB566E4001099B7 /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		12C5336112D8737186407317 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.release.xcconfig"; sourceTree = "<group>"; };
-		64E88FDDA27701550678362E /* Pods_CareTaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareTaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6919D5E11CA7307700A4018F /* CareTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6919D5E41CA7307700A4018F /* DCAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAppDelegate.swift; sourceTree = "<group>"; };
 		6919D5E61CA7307700A4018F /* DCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCViewController.swift; sourceTree = "<group>"; };
@@ -36,12 +48,11 @@
 		695027B81CA8C2400041A505 /* DCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSettingsViewController.swift; sourceTree = "<group>"; };
 		695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChildCollectionViewCell.swift; sourceTree = "<group>"; };
 		69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCServiceCaller.swift; sourceTree = "<group>"; };
-		6957EEE21CB4023200C7A857 /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Common.framework; path = "../Common/build/Debug-iphoneos/Common.framework"; sourceTree = "<group>"; };
 		6957EEE41CB402AD00C7A857 /* CareTaker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CareTaker-Bridging-Header.h"; sourceTree = "<group>"; };
+		69B49CE41CB566E4001099B7 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Common.framework; path = "/Users/rtayal/Library/Developer/Xcode/DerivedData/DayCare-bxgajivugyprmjhldjencqjdkrid/Build/Products/Debug-iphoneos/Common.framework"; sourceTree = "<absolute>"; };
 		69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDailyReportViewController.swift; sourceTree = "<group>"; };
 		6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.debug.xcconfig"; sourceTree = "<group>"; };
 		D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F92EB2E3810470A6C34A2BF4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6957EEE31CB4023200C7A857 /* Common.framework in Frameworks */,
-				7D41FF357B36906FB5C97EFE /* Pods_CareTaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +122,7 @@
 		7D1425F701411744A1515723 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6957EEE21CB4023200C7A857 /* Common.framework */,
-				F92EB2E3810470A6C34A2BF4 /* Pods.framework */,
-				64E88FDDA27701550678362E /* Pods_CareTaker.framework */,
+				69B49CE41CB566E4001099B7 /* Common.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 				9AFB17BC4684D680E507D6A6 /* Embed Pods Frameworks */,
 				6957EEE81CB4106A00C7A857 /* ShellScript */,
 				690056B01CB4BD320090163E /* ShellScript */,
+				69B49CE71CB566E4001099B7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

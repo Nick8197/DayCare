@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: "logoutTapped:")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(SettingsViewController.logoutTapped(_:)))
         
         let user = User.currentUser()
         user?.child.fetchIfNeededInBackgroundWithBlock({ (child: PFObject?, error: NSError?) in
