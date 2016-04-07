@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import MBProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -27,10 +28,16 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginTapped(sender: AnyObject) {
         self.view.endEditing(true)
+        MBProgressHUD.showHUDAddedTo(view, animated: true)
         User.logInWithUsernameInBackground(usernameTextfield.text!, password: passwordTextfield.text!) { (user: PFUser?, error: NSError?) in
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
             if let _ = user {
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 appDelegate.showTabView()
+            } else {
+                let alert = UIAlertController(title: "Could not login", message: error?.localizedDescription, preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }

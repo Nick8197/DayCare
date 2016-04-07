@@ -23,7 +23,7 @@ pod 'Crashlytics'
 pod 'AFNetworking'
 pod 'Parse'
 pod 'XLForm'
-
+pod 'MBProgressHUD'
 end
 
 target :DayCareClient do
@@ -34,4 +34,5 @@ pod 'Crashlytics'
 pod 'AFNetworking'
 pod 'Parse'
 pod 'XLForm'
+pod 'MBProgressHUD'
 end
