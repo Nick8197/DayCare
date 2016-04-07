@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="885" y="312"/>
         </scene>
-        <!--Daily Report View Controller-->
+        <!--Routine View Controller-->
         <scene sceneID="5ue-KJ-xtP">
             <objects>
-                <viewController storyboardIdentifier="DCDailyReportViewController" id="b4q-5v-bSh" customClass="DCDailyReportViewController" customModule="CareTaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DCRoutineViewController" id="b4q-5v-bSh" customClass="DCRoutineViewController" customModule="CareTaker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X4M-6O-yXC"/>
                         <viewControllerLayoutGuide type="bottom" id="9my-u7-dUV"/>

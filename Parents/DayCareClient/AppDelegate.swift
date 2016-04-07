@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DCDiary.registerSubclass()
         DCChild.registerSubclass()
         User.registerSubclass()
+        DCRoutine.registerSubclass()
         
         let config = ParseClientConfiguration {
             $0.applicationId = "myAppId"

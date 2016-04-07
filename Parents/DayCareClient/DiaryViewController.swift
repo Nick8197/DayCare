@@ -53,12 +53,14 @@ extension DiaryViewController: UITableViewDataSource {
         
         let object = dataArray[indexPath.row]
         cell?.textLabel?.text = object.child.name
-        cell?.detailTextLabel?.text = object.diaparing.description
+        cell?.detailTextLabel?.text = object.date.description
         
         let file = object.photo
         file.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) in
             if let imageData = imageData {
                 cell?.imageView?.image = UIImage(data: imageData)
+            } else {
+                cell?.imageView?.image = nil
             }
         }
         

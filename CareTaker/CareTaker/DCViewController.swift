@@ -67,7 +67,7 @@ extension DCViewController: UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("selected " + String(indexPath.row))
         
-        let dailyReportVC = storyboard?.instantiateViewControllerWithIdentifier("DCDailyReportViewController") as! DCDailyReportViewController
+        let dailyReportVC = storyboard?.instantiateViewControllerWithIdentifier("DCRoutineViewController") as! DCRoutineViewController
         dailyReportVC.child = dataArray[indexPath.row]
         let navC = UINavigationController(rootViewController: dailyReportVC)
         navC.modalPresentationStyle = UIModalPresentationStyle.FormSheet

@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import Parse
 
 class RoutineViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var dataArray: [AnyObject] = []
+    var dataArray: [DCRoutine] = []
+    var refreshControl: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Routine"
+        refreshControl.addTarget(self, action: #selector(loadRoutineObjects), forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
         
-        dataArray.append("a")
+        loadRoutineObjects()
+    }
+    
+    func loadRoutineObjects() {
+        refreshControl.beginRefreshing()
+        let query = DCRoutine.query()
+        query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
+            self.refreshControl.endRefreshing()
+            if let objects = objects {
+                self.dataArray = objects as! [DCRoutine]
+                self.tableView.reloadData()
+            }
+        })
     }
     
     @IBAction func submitRoutineTapped(sender: AnyObject) {
@@ -36,7 +52,8 @@ extension RoutineViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell")
         
-        cell?.textLabel?.text = dataArray[indexPath.row] as? String
+        let routine = dataArray[indexPath.row]
+        cell?.textLabel?.text = routine.diaparing.description
         
         return cell!
     }

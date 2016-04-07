@@ -44,11 +44,12 @@ class SubmitRoutineViewController: XLFormViewController {
     
     func doneTapped(sender: AnyObject) {
         
-        let reportObj = DCDiary()
+        let reportObj = DCRoutine()
         reportObj.child = child
         reportObj.diaparing = NSDate()
         reportObj.date = NSDate()
         reportObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+            ServiceCaller.sendPush("New Routine", completion: nil)
 //            self.dismissViewControllerAnimated(true, completion: nil)
             self.navigationController?.popViewControllerAnimated(true)
         }

@@ -48,7 +48,7 @@ class DCNewDiaryViewController: UIViewController {
             self.navigationItem.leftBarButtonItem?.enabled = true
             self.navigationItem.rightBarButtonItem?.enabled = true
             if success {
-                DCServiceCaller.sendPush("New post", completion: nil)
+                ServiceCaller.sendPush("New post", completion: nil)
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
