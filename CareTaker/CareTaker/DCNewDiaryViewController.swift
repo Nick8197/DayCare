@@ -38,12 +38,15 @@ class DCNewDiaryViewController: UIViewController {
     }
     
     func postDiary() {
+        self.navigationItem.leftBarButtonItem?.enabled = false
+        self.navigationItem.rightBarButtonItem?.enabled = false
         let diary = DCDiary()
-        
         let imageData = UIImageJPEGRepresentation(imageView.image!, 1)
         let file = PFFile(data: imageData!)
         diary.photo = file!
         diary.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+            self.navigationItem.leftBarButtonItem?.enabled = true
+            self.navigationItem.rightBarButtonItem?.enabled = true
             if success {
                 DCServiceCaller.sendPush("New post", completion: nil)
                 self.dismissViewControllerAnimated(true, completion: nil)
