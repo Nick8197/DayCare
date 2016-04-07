@@ -13,6 +13,7 @@
 		6919D5EA1CA7307700A4018F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5E81CA7307700A4018F /* Main.storyboard */; };
 		6919D5EC1CA7307700A4018F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5EB1CA7307700A4018F /* Assets.xcassets */; };
 		6919D5EF1CA7307700A4018F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5ED1CA7307700A4018F /* LaunchScreen.storyboard */; };
+		69232DEC1CB60AB400DC0D0C /* DCDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69232DEB1CB60AB400DC0D0C /* DCDiaryViewController.swift */; };
 		695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B61CA8C1F70041A505 /* DCTabBarController.swift */; };
 		695027B91CA8C2400041A505 /* DCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027B81CA8C2400041A505 /* DCSettingsViewController.swift */; };
 		695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */; };
@@ -46,6 +47,7 @@
 		6919D5EB1CA7307700A4018F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6919D5EE1CA7307700A4018F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6919D5F01CA7307800A4018F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69232DEB1CB60AB400DC0D0C /* DCDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDiaryViewController.swift; sourceTree = "<group>"; };
 		695027B61CA8C1F70041A505 /* DCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCTabBarController.swift; sourceTree = "<group>"; };
 		695027B81CA8C2400041A505 /* DCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSettingsViewController.swift; sourceTree = "<group>"; };
 		695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCChildCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -95,7 +97,9 @@
 				695027B61CA8C1F70041A505 /* DCTabBarController.swift */,
 				69EAE7111CA8E16800E716D8 /* Child View Controller */,
 				69EAE70F1CA8D32100E716D8 /* DCDailyReportViewController.swift */,
+				69232DEB1CB60AB400DC0D0C /* DCDiaryViewController.swift */,
 				695027B81CA8C2400041A505 /* DCSettingsViewController.swift */,
+				6919D5E81CA7307700A4018F /* Main.storyboard */,
 				6919D5F61CA7309B00A4018F /* Supporting Files */,
 			);
 			path = CareTaker;
@@ -104,7 +108,6 @@
 		6919D5F61CA7309B00A4018F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6919D5E81CA7307700A4018F /* Main.storyboard */,
 				6919D5EB1CA7307700A4018F /* Assets.xcassets */,
 				6919D5ED1CA7307700A4018F /* LaunchScreen.storyboard */,
 				6919D5F01CA7307800A4018F /* Info.plist */,
@@ -305,6 +308,7 @@
 				69553C8B1CB2AC96007FFEA7 /* DCServiceCaller.swift in Sources */,
 				695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */,
 				69EAE7101CA8D32100E716D8 /* DCDailyReportViewController.swift in Sources */,
+				69232DEC1CB60AB400DC0D0C /* DCDiaryViewController.swift in Sources */,
 				695027B71CA8C1F70041A505 /* DCTabBarController.swift in Sources */,
 				6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */,
 			);
