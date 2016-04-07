@@ -33,7 +33,7 @@ class SubmitRoutineViewController: XLFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(SubmitRoutineViewController.cancelTapped(_:)))
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(SubmitRoutineViewController.cancelTapped(_:)))
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(SubmitRoutineViewController.doneTapped(_:)))
     }

@@ -13,10 +13,13 @@ class DCServiceCaller: NSObject {
     
     typealias Completion = (result: AnyObject?, error: NSError?) -> Void
     
-    class func sendPush(pushText: String, completion: Completion) {
-        //        let params = ["where": ["deviceType": ["$in": ["ios"]]] ,"data": ["title": "Hey", "alert": "Hello"]]
-        PFCloud.callFunctionInBackground("notification", withParameters: nil) { (result: AnyObject?, error: NSError?) in
-            completion(result: result, error: error)
+    class func sendPush(pushText: String, completion: Completion?) {
+//                let params = ["where": ["deviceType": ["$in": ["ios"]]] ,"data": ["title": "Hey", "alert": "Hello"]]
+        let params = ["pushText": pushText]
+        PFCloud.callFunctionInBackground("notification", withParameters: params) { (result: AnyObject?, error: NSError?) in
+            if let completion = completion {
+                completion(result: result, error: error)
+            }
         }
     }
     

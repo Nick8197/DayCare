@@ -19,6 +19,8 @@ class DCDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.navigationController?.navigationBar.translucent = false
+        
         refreshControl.addTarget(self, action: #selector(loadQuery), forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
         
@@ -37,6 +39,11 @@ class DCDiaryViewController: UIViewController {
                 self.tableView.reloadData()
             }
         })
+    }
+    
+    @IBAction func newDiaryPhotoTapped(sender: AnyObject) {
+        let newDiaryVC = self.storyboard?.instantiateViewControllerWithIdentifier("DCNewDiaryViewController") as! DCNewDiaryViewController
+        self.presentViewController(UINavigationController(rootViewController: newDiaryVC), animated: true, completion: nil)
     }
 }
 

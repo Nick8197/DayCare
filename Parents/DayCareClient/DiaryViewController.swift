@@ -31,7 +31,7 @@ class DiaryViewController: UIViewController {
         self.refreshControl.beginRefreshing()
         let query = DCDiary.query()
         query?.includeKey("child")
-        query?.whereKey("child", equalTo: (User.currentUser()?.child)!)
+        //        query?.whereKey("child", equalTo: (User.currentUser()?.child)!)
         query?.orderByDescending("createdAt")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
             self.refreshControl.endRefreshing()
@@ -54,6 +54,13 @@ extension DiaryViewController: UITableViewDataSource {
         let object = dataArray[indexPath.row]
         cell?.textLabel?.text = object.child.name
         cell?.detailTextLabel?.text = object.diaparing.description
+        
+        let file = object.photo
+        file.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) in
+            if let imageData = imageData {
+                cell?.imageView?.image = UIImage(data: imageData)
+            }
+        }
         
         return cell!
     }
