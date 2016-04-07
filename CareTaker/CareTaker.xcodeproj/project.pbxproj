@@ -155,9 +155,9 @@
 				6919D5DF1CA7307700A4018F /* Resources */,
 				9AFB17BC4684D680E507D6A6 /* Embed Pods Frameworks */,
 				6957EEE81CB4106A00C7A857 /* ShellScript */,
-				690056B01CB4BD320090163E /* ShellScript */,
 				69B49CE71CB566E4001099B7 /* Embed Frameworks */,
 				EBBB4EAF9D668191873524BE /* Copy Pods Resources */,
+				69232DEA1CB6080D00DC0D0C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -237,7 +237,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		690056B01CB4BD320090163E /* ShellScript */ = {
+		69232DEA1CB6080D00DC0D0C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,7 +423,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "$(SRCROOT)/CareTaker/Info.plist";
+				INFOPLIST_FILE = CareTaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
@@ -443,7 +443,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "$(SRCROOT)/CareTaker/Info.plist";
+				INFOPLIST_FILE = CareTaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCare;
