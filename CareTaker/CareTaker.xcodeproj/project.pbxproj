@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A3AFED8ED637F7CF87079B /* Pods_CareTaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CA7AB14E96B6DC747A9BB /* Pods_CareTaker.framework */; };
 		6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E41CA7307700A4018F /* DCAppDelegate.swift */; };
 		6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E61CA7307700A4018F /* DCViewController.swift */; };
 		6919D5EA1CA7307700A4018F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5E81CA7307700A4018F /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		019CA7AB14E96B6DC747A9BB /* Pods_CareTaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareTaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C5336112D8737186407317 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		42F5E39DB5AF0682B03BA929 /* Pods-CareTaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.release.xcconfig"; sourceTree = "<group>"; };
 		6919D5E11CA7307700A4018F /* CareTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A3AFED8ED637F7CF87079B /* Pods_CareTaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				69B49CE41CB566E4001099B7 /* Common.framework */,
+				019CA7AB14E96B6DC747A9BB /* Pods_CareTaker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +149,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6919D5F31CA7307800A4018F /* Build configuration list for PBXNativeTarget "CareTaker" */;
 			buildPhases = (
+				546DBDAAC4524323E10A08AB /* Check Pods Manifest.lock */,
 				6919D5DD1CA7307700A4018F /* Sources */,
 				6919D5DE1CA7307700A4018F /* Frameworks */,
 				6919D5DF1CA7307700A4018F /* Resources */,
@@ -152,6 +157,7 @@
 				6957EEE81CB4106A00C7A857 /* ShellScript */,
 				690056B01CB4BD320090163E /* ShellScript */,
 				69B49CE71CB566E4001099B7 /* Embed Frameworks */,
+				EBBB4EAF9D668191873524BE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,6 +222,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		546DBDAAC4524323E10A08AB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		690056B01CB4BD320090163E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +276,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBBB4EAF9D668191873524BE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -23,7 +23,7 @@ default_platform :ios
 
 platform :ios do
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
     cocoapods
     
   end
@@ -47,6 +47,8 @@ platform :ios do
 
   desc "Build and distribute build to Crashlytics"
   lane :crashlytics do
+    ensure_xcode_version(version: REQUIRED_XCODE_VERSION)
+
     gym(
       scheme: "DayCareClient",
       use_legacy_build_api: true
@@ -70,16 +72,16 @@ platform :ios do
   after_all do |lane|
     # This block is called, only if the executed lane was successful
 
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
+    slack(
+      message: "Successfully deployed new App Update."
+    )
   end
 
   error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
+    slack(
+      message: exception.message,
+      success: false
+    )
   end
 end
 
