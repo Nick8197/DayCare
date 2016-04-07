@@ -61,6 +61,7 @@
 		6957EED21CB401DC00C7A857 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				69232DED1CB6F33E00DC0D0C /* Utilities.swift */,
 				6957EEDB1CB401E400C7A857 /* Models */,
 				69A14A831CB4A5670005E88B /* Supporting Files */,
 			);
@@ -73,7 +74,6 @@
 				6957EEDC1CB401EE00C7A857 /* DCChild.swift */,
 				6957EEDD1CB401EE00C7A857 /* DCClass.swift */,
 				6957EEDE1CB401EE00C7A857 /* DCDiary.swift */,
-				69232DED1CB6F33E00DC0D0C /* Utilities.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
