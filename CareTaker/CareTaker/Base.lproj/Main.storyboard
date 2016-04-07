@@ -105,7 +105,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GNj-vQ-M2N" id="DJq-mz-JXP">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -137,7 +137,7 @@
         <scene sceneID="GmV-y5-pW7">
             <objects>
                 <navigationController id="NNx-1L-IzY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Diary" id="dF8-oy-Fqg"/>
+                    <tabBarItem key="tabBarItem" title="Diary" image="ic_list" id="dF8-oy-Fqg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ype-UJ-w9d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -170,7 +170,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oxQ-hA-7xg" id="0wh-Kw-83y">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -255,6 +255,7 @@
     </scenes>
     <resources>
         <image name="ic_child_care" width="24" height="24"/>
+        <image name="ic_list" width="24" height="24"/>
         <image name="ic_settings" width="24" height="24"/>
     </resources>
 </document>
