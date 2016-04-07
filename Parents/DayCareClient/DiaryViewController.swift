@@ -14,13 +14,25 @@ class DiaryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var dataArray: [DCDiary] = []
+    var refreshControl: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl.addTarget(self, action: #selector(refreshTable), forControlEvents: .ValueChanged)
+        self.tableView.addSubview(refreshControl)
+        
+        refreshTable()
+    }
+    
+    func refreshTable() {
+        self.refreshControl.beginRefreshing()
         let query = DCDiary.query()
         query?.includeKey("child")
+        query?.whereKey("child", equalTo: (User.currentUser()?.child)!)
+        query?.orderByDescending("createdAt")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
+            self.refreshControl.endRefreshing()
             if let objects = objects as? [DCDiary] {
                 self.dataArray = objects
                 self.tableView.reloadData()
