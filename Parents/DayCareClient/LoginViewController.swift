@@ -15,8 +15,12 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
+    @IBOutlet var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        loginButton.roundView(5)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedOnView(_:)))
         self.view.addGestureRecognizer(tapGesture)

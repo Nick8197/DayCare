@@ -19,6 +19,8 @@ class DiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Diary"
+        
         refreshControl.addTarget(self, action: #selector(refreshTable), forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
         

@@ -17,6 +17,8 @@ class RoutineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Routine"
+        
         dataArray.append("a")
     }
     
