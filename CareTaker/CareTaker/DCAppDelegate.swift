@@ -32,10 +32,34 @@ class DCAppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(config)
         
+        if BaseUser.currentUser() != nil {
+            showTabView()
+        } else {
+            showLoginView()
+        }
+        
         registerForRemoteNotifications()
         
         return true
     }
+    
+    func showLoginView() {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        
+        self.window?.rootViewController = loginVC
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func showTabView() {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let tabVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        self.window?.rootViewController = tabVC
+        self.window?.makeKeyAndVisible()
+    }
+
     
     func registerForRemoteNotifications() {
         let types: UIUserNotificationType = [.Alert, UIUserNotificationType.Badge, .Sound]

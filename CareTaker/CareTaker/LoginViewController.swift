@@ -33,14 +33,14 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(sender: AnyObject) {
         self.view.endEditing(true)
         MBProgressHUD.showHUDAddedTo(view, animated: true)
-        ClientUser.logInWithUsernameInBackground(usernameTextfield.text!, password: passwordTextfield.text!) { (user: PFUser?, error: NSError?) in
+        BaseUser.logInWithUsernameInBackground(usernameTextfield.text!, password: passwordTextfield.text!) { (user: PFUser?, error: NSError?) in
             MBProgressHUD.hideHUDForView(self.view, animated: true)
-            if let user = user as? ClientUser {
-                if user.userType == UserType.Parent.rawValue {
-                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            if let user = user as? BaseUser {
+                if user.userType == UserType.Teacher.rawValue {
+                    let appDelegate = UIApplication.sharedApplication().delegate as! DCAppDelegate
                     appDelegate.showTabView()
                 } else {
-                    ClientUser.logOut()
+                    BaseUser.logOut()
                     let alert = UIAlertController(title: "Could not login", message: "Please check the username/password.", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)

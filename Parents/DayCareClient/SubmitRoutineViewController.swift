@@ -23,7 +23,7 @@ class SubmitRoutineViewController: XLFormViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialForm()
-        let user = User.currentUser()
+        let user = ClientUser.currentUser()
         user?.child.fetchIfNeededInBackgroundWithBlock({ (child: PFObject?, error: NSError?) in
             self.child = child as! DCChild
             print(self.child.name)

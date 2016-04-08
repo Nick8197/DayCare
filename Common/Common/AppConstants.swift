@@ -13,3 +13,8 @@ public class AppConstants: NSObject {
     public static let CommonBundleIdentifier = "com.rtayal.Common"
     public static let CommonBundle = NSBundle(identifier: CommonBundleIdentifier)
 }
+
+public enum UserType: String {
+    case Parent = "parent"
+    case Teacher = "teacher"
+}

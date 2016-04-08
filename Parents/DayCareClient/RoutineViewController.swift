@@ -34,7 +34,7 @@ class RoutineViewController: UIViewController {
     func loadRoutineObjects() {
         refreshControl.beginRefreshing()
         let query = DCRoutine.query()
-        query?.whereKey("child", equalTo: (User.currentUser()?.child)!)
+        query?.whereKey("child", equalTo: (ClientUser.currentUser()?.child)!)
         query?.orderByDescending("createdAt")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
             self.refreshControl.endRefreshing()
