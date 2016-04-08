@@ -19,7 +19,8 @@
 		695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695027BA1CA8C8370041A505 /* DCChildCollectionViewCell.swift */; };
 		69553C8B1CB2AC96007FFEA7 /* DCServiceCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */; };
 		69B49CE61CB566E4001099B7 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B49CE41CB566E4001099B7 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69EAE7101CA8D32100E716D8 /* DCRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE70F1CA8D32100E716D8 /* DCRoutineViewController.swift */; };
+		69CFF4A31CB81CDC00E03C32 /* DCRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CFF4A21CB81CDC00E03C32 /* DCRoutineViewController.swift */; };
+		69EAE7101CA8D32100E716D8 /* DCSubmitRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE70F1CA8D32100E716D8 /* DCSubmitRoutineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,7 +55,8 @@
 		69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCServiceCaller.swift; sourceTree = "<group>"; };
 		6957EEE41CB402AD00C7A857 /* CareTaker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CareTaker-Bridging-Header.h"; sourceTree = "<group>"; };
 		69B49CE41CB566E4001099B7 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69EAE70F1CA8D32100E716D8 /* DCRoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCRoutineViewController.swift; sourceTree = "<group>"; };
+		69CFF4A21CB81CDC00E03C32 /* DCRoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCRoutineViewController.swift; sourceTree = "<group>"; };
+		69EAE70F1CA8D32100E716D8 /* DCSubmitRoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSubmitRoutineViewController.swift; sourceTree = "<group>"; };
 		6B261E4161BA2B21D27E9566 /* Pods-CareTaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareTaker.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CareTaker/Pods-CareTaker.debug.xcconfig"; sourceTree = "<group>"; };
 		D27630348D17D5B7E9576778 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +97,7 @@
 				69553C8A1CB2AC96007FFEA7 /* DCServiceCaller.swift */,
 				6919D5E41CA7307700A4018F /* DCAppDelegate.swift */,
 				69EAE7111CA8E16800E716D8 /* Child View Controller */,
-				69EAE70F1CA8D32100E716D8 /* DCRoutineViewController.swift */,
+				69CFF4A11CB81CC300E03C32 /* Routine View Controller */,
 				69232DF11CB6F6C100DC0D0C /* Diary View Controllers */,
 				695027B81CA8C2400041A505 /* DCSettingsViewController.swift */,
 				6919D5E81CA7307700A4018F /* Main.storyboard */,
@@ -122,6 +124,15 @@
 				69232DEB1CB60AB400DC0D0C /* DCDiaryViewController.swift */,
 			);
 			name = "Diary View Controllers";
+			sourceTree = "<group>";
+		};
+		69CFF4A11CB81CC300E03C32 /* Routine View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				69CFF4A21CB81CDC00E03C32 /* DCRoutineViewController.swift */,
+				69EAE70F1CA8D32100E716D8 /* DCSubmitRoutineViewController.swift */,
+			);
+			name = "Routine View Controller";
 			sourceTree = "<group>";
 		};
 		69EAE7111CA8E16800E716D8 /* Child View Controller */ = {
@@ -315,9 +326,10 @@
 				6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */,
 				69553C8B1CB2AC96007FFEA7 /* DCServiceCaller.swift in Sources */,
 				695027BB1CA8C8370041A505 /* DCChildCollectionViewCell.swift in Sources */,
-				69EAE7101CA8D32100E716D8 /* DCRoutineViewController.swift in Sources */,
+				69EAE7101CA8D32100E716D8 /* DCSubmitRoutineViewController.swift in Sources */,
 				69232DEC1CB60AB400DC0D0C /* DCDiaryViewController.swift in Sources */,
 				6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */,
+				69CFF4A31CB81CDC00E03C32 /* DCRoutineViewController.swift in Sources */,
 				69232DF01CB6F6BD00DC0D0C /* DCNewDiaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

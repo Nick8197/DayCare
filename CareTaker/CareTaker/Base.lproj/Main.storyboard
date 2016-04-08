@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="885" y="312"/>
         </scene>
-        <!--Routine View Controller-->
+        <!--Submit Routine View Controller-->
         <scene sceneID="5ue-KJ-xtP">
             <objects>
-                <viewController storyboardIdentifier="DCRoutineViewController" id="b4q-5v-bSh" customClass="DCRoutineViewController" customModule="CareTaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DCSubmitRoutineViewController" id="b4q-5v-bSh" customClass="DCSubmitRoutineViewController" customModule="CareTaker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X4M-6O-yXC"/>
                         <viewControllerLayoutGuide type="bottom" id="9my-u7-dUV"/>
@@ -328,6 +328,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zi-zj-A6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1822" y="-653"/>
+        </scene>
+        <!--Routine-->
+        <scene sceneID="wie-zJ-9or">
+            <objects>
+                <viewController storyboardIdentifier="DCRoutineViewController" id="gh3-RT-hmB" customClass="DCRoutineViewController" customModule="CareTaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hDD-pC-Pfo"/>
+                        <viewControllerLayoutGuide type="bottom" id="smq-E5-Fr7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ubd-Qd-rox">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ty-jy-Vrv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="W9M-jc-xD7">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W9M-jc-xD7" id="dpp-iG-nMk">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gh3-RT-hmB" id="N9q-sd-vEv"/>
+                                    <outlet property="delegate" destination="gh3-RT-hmB" id="QIS-Hh-o28"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3ty-jy-Vrv" firstAttribute="top" secondItem="ubd-Qd-rox" secondAttribute="top" id="DZa-FA-JUd"/>
+                            <constraint firstAttribute="trailing" secondItem="3ty-jy-Vrv" secondAttribute="trailing" id="G0v-vI-xfJ"/>
+                            <constraint firstItem="3ty-jy-Vrv" firstAttribute="leading" secondItem="ubd-Qd-rox" secondAttribute="leading" id="nNK-iA-iXt"/>
+                            <constraint firstAttribute="bottom" secondItem="3ty-jy-Vrv" secondAttribute="bottom" id="oY2-8P-yZo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Routine" id="0Uc-Ke-IIi"/>
+                    <navigationItem key="navigationItem" id="H4v-JO-Jd0"/>
+                    <connections>
+                        <outlet property="tableView" destination="3ty-jy-Vrv" id="Pf4-rJ-79v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsw-nI-YJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="858"/>
         </scene>
     </scenes>
     <resources>

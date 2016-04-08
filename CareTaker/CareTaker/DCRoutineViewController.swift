@@ -1,91 +1,79 @@
 //
-//  DCDailyReportViewController.swift
-//  DayCare
+//  RoutineViewController.swift
+//  DayCareClient
 //
-//  Created by Tayal, Rishabh on 3/27/16.
+//  Created by Tayal, Rishabh on 4/5/16.
 //  Copyright © 2016 Tayal, Rishabh. All rights reserved.
 //
 
 import UIKit
-import XLForm
+import Parse
 
-class DCRoutineViewController: XLFormViewController {
-    
-    private struct Tags {
-        static let Feeding = "feeding"
-        static let Napped = "napped"
-        static let Diaparing = "diaparing"
-    }
+class DCRoutineViewController: UIViewController {
+
+    @IBOutlet var tableView: UITableView!
     
     var child: DCChild!
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initialForm()
-    }
+    var dataArray: [DCRoutine] = []
+    var refreshControl: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = child.name
+        self.title = "Routine"
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelTapped(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit Routine", style: .Plain, target: self, action: #selector(submitRoutineTapped(_:)))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(doneTapped(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelTapped(_:)))
+        
+        refreshControl.addTarget(self, action: #selector(loadRoutineObjects), forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.registerNib(UINib(nibName: "RoutineTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "routineCell")
+        loadRoutineObjects()
     }
     
     func cancelTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    func doneTapped(sender: AnyObject) {
-        
-        let reportObj = DCRoutine()
-        reportObj.child = child
-        reportObj.diaparing = NSDate()
-        reportObj.date = NSDate()
-        reportObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
-            ServiceCaller.sendPush("New Routine", completion: nil)
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
+
+    func loadRoutineObjects() {
+        refreshControl.beginRefreshing()
+        let query = DCRoutine.query()
+        query?.whereKey("child", equalTo: child)
+        query?.orderByDescending("createdAt")
+        query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
+            self.refreshControl.endRefreshing()
+            if let objects = objects {
+                self.dataArray = objects as! [DCRoutine]
+                self.tableView.reloadData()
+            }
+        })
     }
     
-    func initialForm() {
-        
-        let form: XLFormDescriptor
-        var section: XLFormSectionDescriptor
-        var row: XLFormRowDescriptor
-        
-        form = XLFormDescriptor()
-        form.addAsteriskToRequiredRowsTitle = true
-        
-        section = XLFormSectionDescriptor.formSectionWithTitle("Feeding time")
-        form.addFormSection(section)
-        
-        // Feeding
-        row = XLFormRowDescriptor(tag: Tags.Feeding, rowType: XLFormRowDescriptorTypeTimeInline, title: "Feeding")
-        row.value = NSDate()
-        row.required = true
-        section.addFormRow(row)
-        
-        section = XLFormSectionDescriptor.formSectionWithTitle("Napped")
-        form.addFormSection(section)
-        
-        //Napped
-        row = XLFormRowDescriptor(tag: Tags.Napped, rowType: XLFormRowDescriptorTypeTimeInline, title: "Napped")
-        row.value = NSDate()
-        row.required = false
-        section.addFormRow(row)
-        
-        section = XLFormSectionDescriptor.formSectionWithTitle("Diaparing")
-        form.addFormSection(section)
-        
-        //Diaparing
-        row = XLFormRowDescriptor(tag: Tags.Diaparing, rowType: XLFormRowDescriptorTypeTimeInline, title: "Diaparing")
-        row.value = NSDate()
-        row.required = false
-        section.addFormRow(row)
-        
-        self.form = form
+    @IBAction func submitRoutineTapped(sender: AnyObject) {
+        let submitReportVC = storyboard?.instantiateViewControllerWithIdentifier("DCSubmitRoutineViewController") as! DCSubmitRoutineViewController
+        submitReportVC.child = child
+        self.navigationController?.pushViewController(submitReportVC, animated: true)
     }
+}
+
+extension DCRoutineViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("routineCell") as! RoutineTableViewCell
+        
+        let routine = dataArray[indexPath.row]
+        cell.configure(routine)
+        
+        return cell
+    }
+}
+
+extension DCRoutineViewController: UITableViewDelegate {
+    
 }
