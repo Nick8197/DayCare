@@ -36,10 +36,24 @@ class DCNewDiaryViewController: UIViewController {
     }
     
     func tappedOnImage(sender: AnyObject) {
+        let actionSheet = UIAlertController(title: "Select Photo", message: "", preferredStyle: .ActionSheet)
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { (action: UIAlertAction) in
+                self.showImagePicker(.Camera)
+            }))
+        }
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .Default, handler: { (action: UIAlertAction) in
+            self.showImagePicker(.PhotoLibrary)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        self.presentViewController(actionSheet, animated: true, completion: nil)
+    }
+    
+    func showImagePicker(sourceType: UIImagePickerControllerSourceType) {
         let imagePickerVC = UIImagePickerController()
         imagePickerVC.delegate = self
         imagePickerVC.allowsEditing = true
-        imagePickerVC.sourceType = .PhotoLibrary
+        imagePickerVC.sourceType = sourceType
         self.presentViewController(imagePickerVC, animated: true, completion: nil)
     }
     
