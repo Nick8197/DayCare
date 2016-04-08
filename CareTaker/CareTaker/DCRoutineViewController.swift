@@ -9,10 +9,11 @@
 import UIKit
 import Parse
 
-class RoutineViewController: UIViewController {
+class DCRoutineViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
+    var child: DCChild!
     var dataArray: [DCRoutine] = []
     var refreshControl: UIRefreshControl = UIRefreshControl()
     
@@ -23,6 +24,8 @@ class RoutineViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit Routine", style: .Plain, target: self, action: #selector(submitRoutineTapped(_:)))
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelTapped(_:)))
+        
         refreshControl.addTarget(self, action: #selector(loadRoutineObjects), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -31,9 +34,14 @@ class RoutineViewController: UIViewController {
         loadRoutineObjects()
     }
     
+    func cancelTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     func loadRoutineObjects() {
         refreshControl.beginRefreshing()
         let query = DCRoutine.query()
+        query?.whereKey("child", equalTo: child)
         query?.orderByDescending("createdAt")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
             self.refreshControl.endRefreshing()
@@ -45,12 +53,13 @@ class RoutineViewController: UIViewController {
     }
     
     @IBAction func submitRoutineTapped(sender: AnyObject) {
-        let submitReportVC = storyboard?.instantiateViewControllerWithIdentifier("SubmitRoutineViewController") as! SubmitRoutineViewController
+        let submitReportVC = storyboard?.instantiateViewControllerWithIdentifier("DCSubmitRoutineViewController") as! DCSubmitRoutineViewController
+        submitReportVC.child = child
         self.navigationController?.pushViewController(submitReportVC, animated: true)
     }
 }
 
-extension RoutineViewController: UITableViewDataSource {
+extension DCRoutineViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }
@@ -65,6 +74,6 @@ extension RoutineViewController: UITableViewDataSource {
     }
 }
 
-extension RoutineViewController: UITableViewDelegate {
+extension DCRoutineViewController: UITableViewDelegate {
     
 }

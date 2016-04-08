@@ -5,3 +5,9 @@ Pods/
 DayCareClient.app.dSYM.zip
 
 DayCareClient.ipa
+
+CareTaker.app.dSYM.zip
+
+CareTaker.ipa
+
+fastlane/report.xml

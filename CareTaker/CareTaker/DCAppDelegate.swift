@@ -23,6 +23,7 @@ class DCAppDelegate: UIResponder, UIApplicationDelegate {
         DCClass.registerSubclass()
         DCChild.registerSubclass()
         DCDiary.registerSubclass()
+        DCRoutine.registerSubclass()
         
         let config = ParseClientConfiguration {
             $0.applicationId = "myAppId"
@@ -31,7 +32,29 @@ class DCAppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(config)
         
+        registerForRemoteNotifications()
+        
         return true
+    }
+    
+    func registerForRemoteNotifications() {
+        let types: UIUserNotificationType = [.Alert, UIUserNotificationType.Badge, .Sound]
+        let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        print("register")
+        let installation = PFInstallation.currentInstallation()
+        installation.setDeviceTokenFromData(deviceToken)
+        installation.channels = ["channel"]
+        installation.saveEventually()
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("Fail")
     }
 }
 

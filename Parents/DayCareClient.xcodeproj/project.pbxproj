@@ -11,7 +11,7 @@
 		690056AE1CB4B9690090163E /* SubmitRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */; };
 		690056B71CB4BF4C0090163E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056B51CB4BF4C0090163E /* LoginViewController.swift */; };
 		690056B81CB4BF4C0090163E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690056B61CB4BF4C0090163E /* LoginViewController.xib */; };
-		69B49CE21CB566AB001099B7 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B49CE01CB566AB001099B7 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69CFF4A01CB813FC00E03C32 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69CFF49E1CB813FC00E03C32 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69EAE7241CA976D400E716D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7231CA976D400E716D8 /* AppDelegate.swift */; };
 		69EAE7261CA976D400E716D8 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7251CA976D400E716D8 /* DiaryViewController.swift */; };
 		69EAE7291CA976D400E716D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE7271CA976D400E716D8 /* Main.storyboard */; };
@@ -29,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				69B49CE21CB566AB001099B7 /* Common.framework in Embed Frameworks */,
+				69CFF4A01CB813FC00E03C32 /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +44,7 @@
 		690056B51CB4BF4C0090163E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		690056B61CB4BF4C0090163E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		69A14A841CB4A5CF0005E88B /* DayCareClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayCareClient-Bridging-Header.h"; sourceTree = "<group>"; };
-		69B49CE01CB566AB001099B7 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Common.framework; path = "/Users/rtayal/Library/Developer/Xcode/DerivedData/DayCare-bxgajivugyprmjhldjencqjdkrid/Build/Products/Debug-iphoneos/Common.framework"; sourceTree = "<absolute>"; };
+		69CFF49E1CB813FC00E03C32 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EAE7201CA976D400E716D8 /* DayCareClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCareClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EAE7231CA976D400E716D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69EAE7251CA976D400E716D8 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
@@ -82,13 +82,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		690056B91CB4BF500090163E /* Login */ = {
+		690056B91CB4BF500090163E /* Login View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				690056B51CB4BF4C0090163E /* LoginViewController.swift */,
 				690056B61CB4BF4C0090163E /* LoginViewController.xib */,
 			);
-			name = Login;
+			name = "Login View Controller";
+			sourceTree = "<group>";
+		};
+		69CFF48E1CB70F7600E03C32 /* Routines View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				690056AB1CB4B7750090163E /* RoutineViewController.swift */,
+				690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */,
+			);
+			name = "Routines View Controllers";
 			sourceTree = "<group>";
 		};
 		69EAE7171CA976D400E716D8 = {
@@ -112,15 +121,14 @@
 		69EAE7221CA976D400E716D8 /* DayCareClient */ = {
 			isa = PBXGroup;
 			children = (
+				69F82BDA1CB4CC750035E6A9 /* User.swift */,
 				69EAE7231CA976D400E716D8 /* AppDelegate.swift */,
-				690056B91CB4BF500090163E /* Login */,
+				690056B91CB4BF500090163E /* Login View Controller */,
+				69CFF48E1CB70F7600E03C32 /* Routines View Controllers */,
 				69EAE7251CA976D400E716D8 /* DiaryViewController.swift */,
-				690056AB1CB4B7750090163E /* RoutineViewController.swift */,
-				690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */,
 				69F82BD61CB4C3D20035E6A9 /* SettingsViewController.swift */,
 				69EAE7271CA976D400E716D8 /* Main.storyboard */,
 				69EAE7351CA9775600E716D8 /* Supporting Files */,
-				69F82BDA1CB4CC750035E6A9 /* User.swift */,
 			);
 			path = DayCareClient;
 			sourceTree = "<group>";
@@ -139,7 +147,7 @@
 		DDCC0558879A8572A39B7B76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				69B49CE01CB566AB001099B7 /* Common.framework */,
+				69CFF49E1CB813FC00E03C32 /* Common.framework */,
 				AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */,
 			);
 			name = Frameworks;
@@ -393,6 +401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = DayCareClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

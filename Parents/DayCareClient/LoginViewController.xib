@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DayCareClient" customModuleProvider="target">
             <connections>
+                <outlet property="loginButton" destination="xuy-L8-4eW" id="Xwb-NG-T7f"/>
                 <outlet property="passwordTextfield" destination="YXp-ep-mRU" id="h1E-ul-3e8"/>
                 <outlet property="usernameTextfield" destination="Rzw-7O-CRi" id="u2M-9D-1Nj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -16,21 +17,40 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-7O-CRi">
-                    <rect key="frame" x="40" y="215" width="520" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username*" textAlignment="natural" minimumFontSize="17" background="textfield-background" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-7O-CRi">
+                    <rect key="frame" x="40" y="220" width="520" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="OgR-Cj-3Kp"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-ep-mRU">
-                    <rect key="frame" x="40" y="285" width="520" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password*" textAlignment="natural" minimumFontSize="17" background="textfield-background" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-ep-mRU">
+                    <rect key="frame" x="40" y="280" width="520" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6Yc-Va-7Aw"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuy-L8-4eW">
-                    <rect key="frame" x="281" y="355" width="38" height="30"/>
-                    <state key="normal" title="Login"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuy-L8-4eW">
+                    <rect key="frame" x="40" y="340" width="520" height="40"/>
+                    <color key="backgroundColor" red="0.1058823529" green="0.52549019610000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Brb-5i-IXR"/>
+                    </constraints>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="loginTapped:" destination="-1" eventType="touchUpInside" id="BF7-uB-z0N"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpP-xu-fq2">
+                    <rect key="frame" x="274" y="388" width="53" height="30"/>
+                    <state key="normal" title="Forgot?"/>
+                    <connections>
+                        <action selector="forgotTapped:" destination="-1" eventType="touchUpInside" id="eX1-2R-ObJ"/>
                     </connections>
                 </button>
             </subviews>
@@ -38,15 +58,23 @@
             <constraints>
                 <constraint firstItem="Rzw-7O-CRi" firstAttribute="centerX" secondItem="YXp-ep-mRU" secondAttribute="centerX" id="3Va-4y-Lo4"/>
                 <constraint firstItem="YXp-ep-mRU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="51g-C5-n9n"/>
+                <constraint firstItem="xuy-L8-4eW" firstAttribute="leading" secondItem="YXp-ep-mRU" secondAttribute="leading" id="9Dn-iR-S2b"/>
                 <constraint firstItem="YXp-ep-mRU" firstAttribute="centerX" secondItem="xuy-L8-4eW" secondAttribute="centerX" id="AVw-SF-wdB"/>
+                <constraint firstItem="lpP-xu-fq2" firstAttribute="top" secondItem="xuy-L8-4eW" secondAttribute="bottom" constant="8" id="EdB-gy-OIV"/>
                 <constraint firstItem="YXp-ep-mRU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HhY-3J-6AV"/>
                 <constraint firstAttribute="trailing" secondItem="YXp-ep-mRU" secondAttribute="trailing" constant="40" id="Jei-em-Voy"/>
-                <constraint firstItem="YXp-ep-mRU" firstAttribute="top" secondItem="Rzw-7O-CRi" secondAttribute="bottom" constant="40" id="S1g-i9-zpP"/>
+                <constraint firstItem="YXp-ep-mRU" firstAttribute="top" secondItem="Rzw-7O-CRi" secondAttribute="bottom" constant="20" id="S1g-i9-zpP"/>
+                <constraint firstItem="xuy-L8-4eW" firstAttribute="trailing" secondItem="YXp-ep-mRU" secondAttribute="trailing" id="T1X-W3-gu2"/>
                 <constraint firstItem="YXp-ep-mRU" firstAttribute="leading" secondItem="Rzw-7O-CRi" secondAttribute="leading" id="dO8-9x-Xrn"/>
                 <constraint firstItem="YXp-ep-mRU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fRI-NZ-k3V"/>
-                <constraint firstItem="xuy-L8-4eW" firstAttribute="top" secondItem="YXp-ep-mRU" secondAttribute="bottom" constant="40" id="k7O-LS-XNk"/>
+                <constraint firstItem="xuy-L8-4eW" firstAttribute="top" secondItem="YXp-ep-mRU" secondAttribute="bottom" constant="20" id="k7O-LS-XNk"/>
                 <constraint firstItem="YXp-ep-mRU" firstAttribute="trailing" secondItem="Rzw-7O-CRi" secondAttribute="trailing" id="lQ6-dO-Wia"/>
+                <constraint firstItem="lpP-xu-fq2" firstAttribute="centerX" secondItem="xuy-L8-4eW" secondAttribute="centerX" id="qdi-HC-L1T"/>
             </constraints>
+            <point key="canvasLocation" x="379" y="130"/>
         </view>
     </objects>
+    <resources>
+        <image name="textfield-background" width="4" height="4"/>
+    </resources>
 </document>

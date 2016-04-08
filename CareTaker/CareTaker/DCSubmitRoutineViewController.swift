@@ -1,16 +1,15 @@
 //
-//  SubmitRoutineViewController.swift
-//  DayCareClient
+//  DCDailyReportViewController.swift
+//  DayCare
 //
-//  Created by Tayal, Rishabh on 4/5/16.
+//  Created by Tayal, Rishabh on 3/27/16.
 //  Copyright © 2016 Tayal, Rishabh. All rights reserved.
 //
 
 import UIKit
 import XLForm
-import Parse
 
-class SubmitRoutineViewController: XLFormViewController {
+class DCSubmitRoutineViewController: XLFormViewController {
     
     private struct Tags {
         static let Feeding = "feeding"
@@ -23,19 +22,16 @@ class SubmitRoutineViewController: XLFormViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialForm()
-        let user = User.currentUser()
-        user?.child.fetchIfNeededInBackgroundWithBlock({ (child: PFObject?, error: NSError?) in
-            self.child = child as! DCChild
-            print(self.child.name)
-        })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(SubmitRoutineViewController.cancelTapped(_:)))
+        self.title = child.name
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(SubmitRoutineViewController.doneTapped(_:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelTapped(_:)))
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(doneTapped(_:)))
     }
     
     func cancelTapped(sender: AnyObject) {
@@ -50,8 +46,7 @@ class SubmitRoutineViewController: XLFormViewController {
         reportObj.date = NSDate()
         reportObj.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
             ServiceCaller.sendPush("New Routine", completion: nil)
-//            self.dismissViewControllerAnimated(true, completion: nil)
-            self.navigationController?.popViewControllerAnimated(true)
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     
@@ -92,5 +87,5 @@ class SubmitRoutineViewController: XLFormViewController {
         section.addFormRow(row)
         
         self.form = form
-    }    
+    }
 }
