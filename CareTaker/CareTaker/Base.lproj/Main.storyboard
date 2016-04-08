@@ -165,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OeK-QO-Wf2">
-                                <rect key="frame" x="0.0" y="44" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="60" width="600" height="476"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="TuA-Eq-YRb" id="wVg-8A-Ezc"/>
@@ -173,10 +173,12 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jh-1v-vr0">
-                                <rect key="frame" x="40" y="10" width="520" height="24"/>
-                                <state key="normal" title="Post Photo" image="ic_photo_camera">
-                                    <color key="titleColor" red="0.1058823529" green="0.52549019610000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <rect key="frame" x="40" y="10" width="520" height="40"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.52549019610000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="H5A-mX-Cp7"/>
+                                </constraints>
+                                <state key="normal" title="Post Photo" image="ic_photo_camera"/>
                                 <connections>
                                     <action selector="newDiaryPhotoTapped:" destination="TuA-Eq-YRb" eventType="touchUpInside" id="O5T-Z3-H2L"/>
                                 </connections>
@@ -202,6 +204,7 @@
                     <navigationItem key="navigationItem" id="cKv-EN-qyl"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="postPhotoButton" destination="1Jh-1v-vr0" id="ASz-6Y-i73"/>
                         <outlet property="tableView" destination="OeK-QO-Wf2" id="UBL-aX-PIl"/>
                     </connections>
                 </viewController>

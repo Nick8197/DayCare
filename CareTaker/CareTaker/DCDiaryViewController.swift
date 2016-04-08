@@ -12,6 +12,7 @@ import Parse
 class DCDiaryViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var postPhotoButton: UIButton!
     
     var dataArray: [DCDiary] = []
     var refreshControl = UIRefreshControl()
@@ -27,6 +28,8 @@ class DCDiaryViewController: UIViewController {
         self.tableView.estimatedRowHeight = 80
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.registerNib(UINib(nibName: "DiaryTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "diaryCell")
+    
+        postPhotoButton.roundView(4)
         
         loadQuery()
     }
