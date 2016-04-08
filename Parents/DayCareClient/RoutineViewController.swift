@@ -29,6 +29,7 @@ class RoutineViewController: UIViewController {
     func loadRoutineObjects() {
         refreshControl.beginRefreshing()
         let query = DCRoutine.query()
+        query?.orderByDescending("createdAt")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
             self.refreshControl.endRefreshing()
             if let objects = objects {
