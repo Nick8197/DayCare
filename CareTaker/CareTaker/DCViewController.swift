@@ -40,7 +40,7 @@ class DCViewController: UIViewController {
         
         collectionView.alwaysBounceVertical = true
         let flow = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        flow.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        flow.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
     }
 }
 
