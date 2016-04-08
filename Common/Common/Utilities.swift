@@ -21,4 +21,10 @@ extension UIView {
         }
         self.layer.masksToBounds = true
     }
+    
+    public func applyShadow() {
+        self.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        self.layer.shadowRadius = 4
+    }
 }

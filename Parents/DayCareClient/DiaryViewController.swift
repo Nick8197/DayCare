@@ -23,6 +23,11 @@ class DiaryViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(refreshTable), forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
+        tableView.separatorStyle = .None
+        
+        tableView.registerNib(UINib(nibName: "DiaryTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "diaryCell")
         
         refreshTable()
     }
@@ -49,20 +54,23 @@ extension DiaryViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("diaryCell") as? DiaryTableViewCell
+
         let object = dataArray[indexPath.row]
-        cell?.textLabel?.text = object.child.name
-        cell?.detailTextLabel?.text = object.date.description
         
-        let file = object.photo
-        file.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) in
-            if let imageData = imageData {
-                cell?.imageView?.image = UIImage(data: imageData)
-            } else {
-                cell?.imageView?.image = nil
-            }
-        }
+        cell?.configure(object)
+        
+//        cell?.textLabel?.text = object.child.name
+//        cell?.detailTextLabel?.text = object.date.description
+//        
+//        let file = object.photo
+//        file.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) in
+//            if let imageData = imageData {
+//                cell?.imageView?.image = UIImage(data: imageData)
+//            } else {
+//                cell?.imageView?.image = nil
+//            }
+//        }
         
         return cell!
     }
