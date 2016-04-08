@@ -55,5 +55,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotTapped(sender: AnyObject) {
         print("forgot tapped")
+//        let alert = UIAlertController(title: "Enter email", message: "", preferredStyle: .Alert)
+//        alert.addTextFieldWithConfigurationHandler(nil)
+//        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction) in
+//            let textfield = alert.textFields?.first
+//            ClientUser.requestPasswordResetForEmailInBackground((textfield?.text)!, block: { (success: Bool, error: NSError?) in
+//                print(error)
+//            })
+//        }))
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+//        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
