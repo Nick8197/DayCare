@@ -20,9 +20,14 @@ class RoutineViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Routine"
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit Routine", style: .Plain, target: self, action: #selector(submitRoutineTapped(_:)))
+        
         refreshControl.addTarget(self, action: #selector(loadRoutineObjects), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
-        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.registerNib(UINib(nibName: "RoutineTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "routineCell")
         loadRoutineObjects()
     }
     
@@ -51,12 +56,12 @@ extension RoutineViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("routineCell") as! RoutineTableViewCell
         
         let routine = dataArray[indexPath.row]
-        cell?.textLabel?.text = routine.diaparing.prettyDate()
+        cell.configure(routine)
         
-        return cell!
+        return cell
     }
 }
 

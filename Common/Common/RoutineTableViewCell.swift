@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 public class RoutineTableViewCell: UITableViewCell {
 
@@ -18,8 +19,10 @@ public class RoutineTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(routineObject: DCRoutine) {
-        childNameLabel.text = routineObject.child.name
+    public func configure(routineObject: DCRoutine) {
+        routineObject.child.fetchIfNeededInBackgroundWithBlock { (child: PFObject?, error: NSError?) in
+            self.childNameLabel.text = routineObject.child.name
+        }
         dateLabel.text = routineObject.date.prettyDate()
     }
 }

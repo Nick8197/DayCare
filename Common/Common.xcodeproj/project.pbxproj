@@ -78,6 +78,7 @@
 				69CFF48F1CB7110C00E03C32 /* ServiceCaller.swift */,
 				69232DED1CB6F33E00DC0D0C /* Utilities.swift */,
 				69CFF4961CB8045500E03C32 /* AppConstants.swift */,
+				69CFF4951CB8025600E03C32 /* Views */,
 				6957EEDB1CB401E400C7A857 /* Models */,
 				69A14A831CB4A5670005E88B /* Supporting Files */,
 			);
@@ -91,7 +92,6 @@
 				6957EEDD1CB401EE00C7A857 /* DCClass.swift */,
 				6957EEDE1CB401EE00C7A857 /* DCDiary.swift */,
 				69CFF48C1CB7099300E03C32 /* DCRoutine.swift */,
-				69CFF4951CB8025600E03C32 /* Views */,
 			);
 			name = Models;
 			sourceTree = "<group>";
