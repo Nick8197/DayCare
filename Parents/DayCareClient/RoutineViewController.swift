@@ -53,7 +53,7 @@ extension RoutineViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell")
         
         let routine = dataArray[indexPath.row]
-        cell?.textLabel?.text = routine.diaparing.description
+        cell?.textLabel?.text = routine.diaparing.prettyDate()
         
         return cell!
     }

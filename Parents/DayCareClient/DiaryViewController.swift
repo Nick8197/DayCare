@@ -61,7 +61,7 @@ extension DiaryViewController: UITableViewDataSource {
         cell?.configure(object)
         
 //        cell?.textLabel?.text = object.child.name
-//        cell?.detailTextLabel?.text = object.date.description
+//        cell?.detailTextLabel?.text = object.date.prettyDate()
 //        
 //        let file = object.photo
 //        file.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) in

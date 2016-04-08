@@ -23,6 +23,7 @@ class DCDiaryViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(loadQuery), forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
+        self.tableView.separatorStyle = .None
         self.tableView.estimatedRowHeight = 80
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.registerNib(UINib(nibName: "DiaryTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "diaryCell")

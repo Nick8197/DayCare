@@ -24,7 +24,7 @@ public class DiaryTableViewCell: UITableViewCell {
     
     public func configure(diaryObject: DCDiary) {
         nameLabel.text = diaryObject.child.name
-        dateLabel.text = diaryObject.date.description
+        dateLabel.text = diaryObject.date.prettyDate()
         let file = diaryObject.photo
         file.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
             if let data = data {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FormatterKit
 
 class Utilities: NSObject {
     
@@ -26,5 +27,13 @@ extension UIView {
         self.layer.shadowOffset = CGSize(width: 5, height: 5)
         self.layer.shadowColor = UIColor.darkGrayColor().CGColor
         self.layer.shadowRadius = 4
+    }
+}
+
+extension NSDate {
+    public func prettyDate() -> String {
+        let timeIntervalFormatter = TTTTimeIntervalFormatter()
+        let prettyDate = timeIntervalFormatter.stringForTimeIntervalFromDate(NSDate(), toDate: self)
+        return prettyDate
     }
 }

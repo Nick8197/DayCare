@@ -20,6 +20,6 @@ public class RoutineTableViewCell: UITableViewCell {
     
     func configure(routineObject: DCRoutine) {
         childNameLabel.text = routineObject.child.name
-        dateLabel.text = routineObject.date.description
+        dateLabel.text = routineObject.date.prettyDate()
     }
 }

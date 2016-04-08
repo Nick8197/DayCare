@@ -12,6 +12,7 @@ xcodeproj 'Common/Common.xcodeproj'
 target :Common do
 xcodeproj 'Common/Common.xcodeproj'
 pod 'Parse'
+pod 'FormatterKit'
 end
 
 target :CareTaker do
@@ -24,6 +25,7 @@ pod 'AFNetworking'
 pod 'Parse'
 pod 'XLForm'
 pod 'MBProgressHUD'
+pod 'FormatterKit'
 end
 
 target :DayCareClient do
@@ -35,4 +37,5 @@ pod 'AFNetworking'
 pod 'Parse'
 pod 'XLForm'
 pod 'MBProgressHUD'
+pod 'FormatterKit'
 end

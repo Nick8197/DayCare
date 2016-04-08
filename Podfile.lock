@@ -18,6 +18,25 @@ PODS:
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
+  - FormatterKit (1.8.0):
+    - FormatterKit/AddressFormatter (= 1.8.0)
+    - FormatterKit/ArrayFormatter (= 1.8.0)
+    - FormatterKit/ColorFormatter (= 1.8.0)
+    - FormatterKit/LocationFormatter (= 1.8.0)
+    - FormatterKit/NameFormatter (= 1.8.0)
+    - FormatterKit/OrdinalNumberFormatter (= 1.8.0)
+    - FormatterKit/TimeIntervalFormatter (= 1.8.0)
+    - FormatterKit/UnitOfInformationFormatter (= 1.8.0)
+    - FormatterKit/URLRequestFormatter (= 1.8.0)
+  - FormatterKit/AddressFormatter (1.8.0)
+  - FormatterKit/ArrayFormatter (1.8.0)
+  - FormatterKit/ColorFormatter (1.8.0)
+  - FormatterKit/LocationFormatter (1.8.0)
+  - FormatterKit/NameFormatter (1.8.0)
+  - FormatterKit/OrdinalNumberFormatter (1.8.0)
+  - FormatterKit/TimeIntervalFormatter (1.8.0)
+  - FormatterKit/UnitOfInformationFormatter (1.8.0)
+  - FormatterKit/URLRequestFormatter (1.8.0)
   - MBProgressHUD (0.9.2)
   - Parse (1.13.0):
     - Bolts/Tasks (~> 1.6)
@@ -27,6 +46,7 @@ DEPENDENCIES:
   - AFNetworking
   - Crashlytics
   - Fabric
+  - FormatterKit
   - MBProgressHUD
   - Parse
   - XLForm
@@ -36,6 +56,7 @@ SPEC CHECKSUMS:
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  FormatterKit: bddde83e054edf9d9ee14f9de3b3a5103db256f4
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   XLForm: c9ee7e0f859341279bfd894f9589a9d25c23e4df
