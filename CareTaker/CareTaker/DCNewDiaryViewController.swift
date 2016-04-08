@@ -23,6 +23,12 @@ class DCNewDiaryViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelTapped(_:)))
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .Plain, target: self, action: #selector(postDiary))
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedOnScreen(_:))))
+    }
+    
+    func tappedOnScreen(sender: AnyObject) {
+        self.view.endEditing(true)
     }
     
     func cancelTapped(sender: AnyObject) {
@@ -38,6 +44,7 @@ class DCNewDiaryViewController: UIViewController {
     }
     
     func postDiary() {
+        self.view.endEditing(true)
         self.navigationItem.leftBarButtonItem?.enabled = false
         self.navigationItem.rightBarButtonItem?.enabled = false
         let diary = DCDiary()
