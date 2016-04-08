@@ -23,6 +23,9 @@ class DCDiaryViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(loadQuery), forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
+        self.tableView.estimatedRowHeight = 80
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.registerNib(UINib(nibName: "DiaryTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "diaryCell")
         
         loadQuery()
     }
@@ -32,6 +35,7 @@ class DCDiaryViewController: UIViewController {
         let query = DCDiary.query()
         //        query?.whereKey("child", containedIn: )
         query?.includeKey("child")
+        query?.orderByDescending("createdAt")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
             self.refreshControl.endRefreshing()
             if let objects = objects {
@@ -53,12 +57,12 @@ extension DCDiaryViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("diaryCell") as! DiaryTableViewCell
         
         let obj = dataArray[indexPath.row]
-        cell?.textLabel?.text = obj.child.name
+        cell.configure(obj)
         
-        return cell!
+        return cell
     }
 }
 
