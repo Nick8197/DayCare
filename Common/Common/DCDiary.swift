@@ -17,4 +17,5 @@ public class DCDiary: PFObject, PFSubclassing {
     @NSManaged public var child: DCChild
     @NSManaged public var date: NSDate
     @NSManaged public var photo: PFFile
+    @NSManaged public var caption: String
 }
