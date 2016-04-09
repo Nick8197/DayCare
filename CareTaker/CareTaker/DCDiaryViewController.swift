@@ -78,7 +78,7 @@ extension DCDiaryViewController: UITableViewDelegate {
         let file = object.photo
         file.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
             if let data = data {
-                let photo = Photo(imageData: data, attributedCaptionTitle: nil)
+                let photo = Photo(imageData: data, attributedCaptionTitle: NSAttributedString(string: object.caption, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()]))
                 let photosViewController = NYTPhotosViewController(photos: [photo])
                 self.presentViewController(photosViewController, animated: true, completion: nil)
             }
