@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35A3AFED8ED637F7CF87079B /* Pods_CareTaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CA7AB14E96B6DC747A9BB /* Pods_CareTaker.framework */; };
 		6919D5E51CA7307700A4018F /* DCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E41CA7307700A4018F /* DCAppDelegate.swift */; };
 		6919D5E71CA7307700A4018F /* DCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D5E61CA7307700A4018F /* DCViewController.swift */; };
 		6919D5EA1CA7307700A4018F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6919D5E81CA7307700A4018F /* Main.storyboard */; };
@@ -74,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A3AFED8ED637F7CF87079B /* Pods_CareTaker.framework in Frameworks */,
 				92C38252ADA9BDE5AEED0646 /* Pods_DayCare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
