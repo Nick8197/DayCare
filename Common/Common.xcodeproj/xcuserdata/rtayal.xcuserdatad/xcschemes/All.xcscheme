@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-               BuildableName = "CareTaker.app"
-               BlueprintName = "CareTaker"
-               ReferencedContainer = "container:../CareTaker/CareTaker.xcodeproj">
+               BuildableName = "DayCare.app"
+               BlueprintName = "DayCare"
+               ReferencedContainer = "container:../DayCare/DayCare.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "69EAE71F1CA976D400E716D8"
                BuildableName = "DayCareClient.app"
                BlueprintName = "DayCareClient"
-               ReferencedContainer = "container:../Parents/DayCareClient.xcodeproj">
+               ReferencedContainer = "container:../DayCareClient/DayCareClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

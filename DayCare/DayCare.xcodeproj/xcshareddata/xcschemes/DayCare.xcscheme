@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-               BuildableName = "CareTaker.app"
-               BlueprintName = "CareTaker"
-               ReferencedContainer = "container:CareTaker.xcodeproj">
+               BuildableName = "DayCare.app"
+               BlueprintName = "DayCare"
+               ReferencedContainer = "container:DayCare.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-            BuildableName = "CareTaker.app"
-            BlueprintName = "CareTaker"
-            ReferencedContainer = "container:CareTaker.xcodeproj">
+            BuildableName = "DayCare.app"
+            BlueprintName = "DayCare"
+            ReferencedContainer = "container:DayCare.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-            BuildableName = "CareTaker.app"
-            BlueprintName = "CareTaker"
-            ReferencedContainer = "container:CareTaker.xcodeproj">
+            BuildableName = "DayCare.app"
+            BlueprintName = "DayCare"
+            ReferencedContainer = "container:DayCare.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6919D5E01CA7307700A4018F"
-            BuildableName = "CareTaker.app"
-            BlueprintName = "CareTaker"
-            ReferencedContainer = "container:CareTaker.xcodeproj">
+            BuildableName = "DayCare.app"
+            BlueprintName = "DayCare"
+            ReferencedContainer = "container:DayCare.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

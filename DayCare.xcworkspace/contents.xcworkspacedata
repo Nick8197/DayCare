@@ -5,10 +5,10 @@
       location = "group:Common/Common.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CareTaker/CareTaker.xcodeproj">
+      location = "group:DayCare/DayCare.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Parents/DayCareClient.xcodeproj">
+      location = "group:DayCareClient/DayCareClient.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

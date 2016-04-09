@@ -5,8 +5,8 @@ use_frameworks!
 
 inhibit_all_warnings!
 
-xcodeproj 'CareTaker/CareTaker.xcodeproj'
-xcodeproj 'Parents/DayCareClient.xcodeproj'
+xcodeproj 'DayCare/DayCare.xcodeproj'
+xcodeproj 'DayCareClient/DayCareClient.xcodeproj'
 xcodeproj 'Common/Common.xcodeproj'
 
 target :Common do
@@ -16,8 +16,8 @@ pod 'FormatterKit'
 pod 'NYTPhotoViewer'
 end
 
-target :CareTaker do
-xcodeproj 'CareTaker/CareTaker.xcodeproj'
+target :DayCare do
+xcodeproj 'DayCare/DayCare.xcodeproj'
 
 pod 'Fabric'
 pod 'Crashlytics'
@@ -32,7 +32,7 @@ pod 'NYTPhotoViewer'
 end
 
 target :DayCareClient do
-xcodeproj 'Parents/DayCareClient.xcodeproj'
+xcodeproj 'DayCareClient/DayCareClient.xcodeproj'
 pod 'Fabric'
 pod 'Crashlytics'
 
