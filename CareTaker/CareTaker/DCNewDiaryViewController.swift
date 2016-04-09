@@ -16,13 +16,17 @@ class DCNewDiaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let cameraToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
         cameraToolbar.barStyle = .Default
-        cameraToolbar.items = [UIBarButtonItem(image: UIImage(named: "ic_photo_camera"), style: .Plain, target: self, action: #selector(tappedOnImage(_:)))]
+        cameraToolbar.items = [UIBarButtonItem(image: UIImage.init(named: "ic_photo_size_select_actual"), style: .Plain, target: self, action: #selector(showLibaryPicker))]
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            cameraToolbar.items?.append(UIBarButtonItem(image: UIImage(named: "ic_add_a_photo"), style: .Plain, target: self, action: #selector(cameraPicker)))
+        }
         cameraToolbar.sizeToFit()
         textView.inputAccessoryView = cameraToolbar
         
+        textView.placeholder = "What's happening?"
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(cancelTapped(_:)))
         
@@ -39,19 +43,27 @@ class DCNewDiaryViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func tappedOnImage(sender: AnyObject) {
-        let actionSheet = UIAlertController(title: "Select Photo", message: "", preferredStyle: .ActionSheet)
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { (action: UIAlertAction) in
-                self.showImagePicker(.Camera)
-            }))
-        }
-        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .Default, handler: { (action: UIAlertAction) in
-            self.showImagePicker(.PhotoLibrary)
-        }))
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        self.presentViewController(actionSheet, animated: true, completion: nil)
+    func cameraPicker() {
+        showImagePicker(.Camera)
     }
+    
+    func showLibaryPicker() {
+        showImagePicker(.PhotoLibrary)
+    }
+    
+    //    func tappedOnImage(sender: AnyObject) {
+    //        let actionSheet = UIAlertController(title: "Select Photo", message: "", preferredStyle: .ActionSheet)
+    //        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+    //            actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { (action: UIAlertAction) in
+    //                self.showImagePicker(.Camera)
+    //            }))
+    //        }
+    //        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .Default, handler: { (action: UIAlertAction) in
+    //            self.showImagePicker(.PhotoLibrary)
+    //        }))
+    //        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+    //        self.presentViewController(actionSheet, animated: true, completion: nil)
+    //    }
     
     func showImagePicker(sourceType: UIImagePickerControllerSourceType) {
         let imagePickerVC = UIImagePickerController()
