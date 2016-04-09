@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-Jh-Kaa">
-                                <rect key="frame" x="5" y="50" width="307" height="120"/>
+                                <rect key="frame" x="0.0" y="51" width="317" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g2o-Jh-Kaa" secondAttribute="height" multiplier="304:119" id="AJ6-1N-ZlV"/>
                                     <constraint firstAttribute="width" constant="304" id="qhM-jZ-LLl"/>
@@ -36,14 +36,14 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKc-Cg-9RP">
-                                <rect key="frame" x="5" y="26" width="307" height="24"/>
+                                <rect key="frame" x="5" y="26" width="307" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g2o-Jh-Kaa" secondAttribute="trailing" id="09N-Go-3h3"/>
                             <constraint firstItem="Rnt-Ro-GNb" firstAttribute="top" secondItem="LdT-sd-GG7" secondAttribute="top" constant="5" id="8ef-ee-4VZ"/>
                             <constraint firstItem="hKc-Cg-9RP" firstAttribute="top" secondItem="Rnt-Ro-GNb" secondAttribute="bottom" id="DnP-zj-y87"/>
                             <constraint firstAttribute="trailing" secondItem="Rnt-Ro-GNb" secondAttribute="trailing" constant="5" id="Fod-V0-mc9"/>
@@ -52,9 +52,16 @@
                             <constraint firstItem="g2o-Jh-Kaa" firstAttribute="leading" secondItem="hKc-Cg-9RP" secondAttribute="leading" id="W36-I1-c4j"/>
                             <constraint firstItem="g2o-Jh-Kaa" firstAttribute="trailing" secondItem="hKc-Cg-9RP" secondAttribute="trailing" id="cLa-XU-zAe"/>
                             <constraint firstItem="hKc-Cg-9RP" firstAttribute="leading" secondItem="Rnt-Ro-GNb" secondAttribute="leading" id="jh2-yF-xqp"/>
+                            <constraint firstItem="g2o-Jh-Kaa" firstAttribute="leading" secondItem="LdT-sd-GG7" secondAttribute="leading" id="ksY-Qo-K1i"/>
                             <constraint firstItem="hKc-Cg-9RP" firstAttribute="trailing" secondItem="Rnt-Ro-GNb" secondAttribute="trailing" id="oKc-2W-Ihz"/>
-                            <constraint firstAttribute="bottom" secondItem="g2o-Jh-Kaa" secondAttribute="bottom" constant="5" id="otL-hm-Zj2"/>
+                            <constraint firstAttribute="bottom" secondItem="g2o-Jh-Kaa" secondAttribute="bottom" id="otL-hm-Zj2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W36-I1-c4j"/>
+                                <exclude reference="cLa-XU-zAe"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

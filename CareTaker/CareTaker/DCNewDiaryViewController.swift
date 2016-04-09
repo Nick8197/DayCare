@@ -82,6 +82,8 @@ class DCNewDiaryViewController: UIViewController {
         let imageData = UIImageJPEGRepresentation(image!, 1)
         let file = PFFile(data: imageData!)
         diary.photo = file!
+        diary.date = NSDate()
+        diary.caption = textView.text
         diary.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
             self.navigationItem.leftBarButtonItem?.enabled = true
             self.navigationItem.rightBarButtonItem?.enabled = true

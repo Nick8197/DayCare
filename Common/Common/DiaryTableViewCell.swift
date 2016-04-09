@@ -20,10 +20,12 @@ public class DiaryTableViewCell: UITableViewCell {
         
         self.cardView.roundView(4)
         self.cardView.applyShadow()
+        self.cardView.backgroundColor = UIColor(white: 0.9, alpha: 1)
     }
     
     public func configure(diaryObject: DCDiary) {
-        nameLabel.text = diaryObject.child.name
+//        nameLabel.text = diaryObject.child.name
+        nameLabel.text = diaryObject.caption
         dateLabel.text = diaryObject.date.prettyDate()
         let file = diaryObject.photo
         file.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
