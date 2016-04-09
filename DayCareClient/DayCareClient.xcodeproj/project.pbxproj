@@ -1,456 +1,991 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		690056AC1CB4B7750090163E /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056AB1CB4B7750090163E /* RoutineViewController.swift */; };
-		690056AE1CB4B9690090163E /* SubmitRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */; };
-		690056B71CB4BF4C0090163E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690056B51CB4BF4C0090163E /* LoginViewController.swift */; };
-		690056B81CB4BF4C0090163E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690056B61CB4BF4C0090163E /* LoginViewController.xib */; };
-		69CFF4A01CB813FC00E03C32 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69CFF49E1CB813FC00E03C32 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69EAE7241CA976D400E716D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7231CA976D400E716D8 /* AppDelegate.swift */; };
-		69EAE7261CA976D400E716D8 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EAE7251CA976D400E716D8 /* DiaryViewController.swift */; };
-		69EAE7291CA976D400E716D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE7271CA976D400E716D8 /* Main.storyboard */; };
-		69EAE72B1CA976D400E716D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE72A1CA976D400E716D8 /* Assets.xcassets */; };
-		69EAE72E1CA976D400E716D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE72C1CA976D400E716D8 /* LaunchScreen.storyboard */; };
-		69F82BD71CB4C3D20035E6A9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F82BD61CB4C3D20035E6A9 /* SettingsViewController.swift */; };
-		69F82BDB1CB4CC750035E6A9 /* ClientUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F82BDA1CB4CC750035E6A9 /* ClientUser.swift */; };
-		C995086F388F5D39578F9F0E /* Pods_DayCareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		69B49CE31CB566AB001099B7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				69CFF4A01CB813FC00E03C32 /* Common.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		0E5C8889C014CBF9A01A4975 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		1BEA28516BFFB2D14E3197AB /* Pods-DayCareClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayCareClient.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient.debug.xcconfig"; sourceTree = "<group>"; };
-		690056AB1CB4B7750090163E /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
-		690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitRoutineViewController.swift; sourceTree = "<group>"; };
-		690056B51CB4BF4C0090163E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		690056B61CB4BF4C0090163E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		69A14A841CB4A5CF0005E88B /* DayCareClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayCareClient-Bridging-Header.h"; sourceTree = "<group>"; };
-		69CFF49E1CB813FC00E03C32 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69EAE7201CA976D400E716D8 /* DayCareClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCareClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		69EAE7231CA976D400E716D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69EAE7251CA976D400E716D8 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
-		69EAE7281CA976D400E716D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		69EAE72A1CA976D400E716D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69EAE72D1CA976D400E716D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		69EAE72F1CA976D400E716D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69F82BD61CB4C3D20035E6A9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		69F82BDA1CB4CC750035E6A9 /* ClientUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientUser.swift; sourceTree = "<group>"; };
-		AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayCareClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D04F03D4FB89EA47F415401E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F764C5D0379C724DADC7CBAC /* Pods-DayCareClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayCareClient.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		69EAE71D1CA976D400E716D8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C995086F388F5D39578F9F0E /* Pods_DayCareClient.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		599A9DA7DD84E8FBB966039E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0E5C8889C014CBF9A01A4975 /* Pods.debug.xcconfig */,
-				D04F03D4FB89EA47F415401E /* Pods.release.xcconfig */,
-				1BEA28516BFFB2D14E3197AB /* Pods-DayCareClient.debug.xcconfig */,
-				F764C5D0379C724DADC7CBAC /* Pods-DayCareClient.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		690056B91CB4BF500090163E /* Login View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				690056B51CB4BF4C0090163E /* LoginViewController.swift */,
-				690056B61CB4BF4C0090163E /* LoginViewController.xib */,
-			);
-			name = "Login View Controller";
-			sourceTree = "<group>";
-		};
-		69CFF48E1CB70F7600E03C32 /* Routines View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				690056AB1CB4B7750090163E /* RoutineViewController.swift */,
-				690056AD1CB4B9690090163E /* SubmitRoutineViewController.swift */,
-			);
-			name = "Routines View Controllers";
-			sourceTree = "<group>";
-		};
-		69EAE7171CA976D400E716D8 = {
-			isa = PBXGroup;
-			children = (
-				69EAE7221CA976D400E716D8 /* DayCareClient */,
-				69EAE7211CA976D400E716D8 /* Products */,
-				599A9DA7DD84E8FBB966039E /* Pods */,
-				DDCC0558879A8572A39B7B76 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		69EAE7211CA976D400E716D8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				69EAE7201CA976D400E716D8 /* DayCareClient.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		69EAE7221CA976D400E716D8 /* DayCareClient */ = {
-			isa = PBXGroup;
-			children = (
-				69F82BDA1CB4CC750035E6A9 /* ClientUser.swift */,
-				69EAE7231CA976D400E716D8 /* AppDelegate.swift */,
-				690056B91CB4BF500090163E /* Login View Controller */,
-				69CFF48E1CB70F7600E03C32 /* Routines View Controllers */,
-				69EAE7251CA976D400E716D8 /* DiaryViewController.swift */,
-				69F82BD61CB4C3D20035E6A9 /* SettingsViewController.swift */,
-				69EAE7271CA976D400E716D8 /* Main.storyboard */,
-				69EAE7351CA9775600E716D8 /* Supporting Files */,
-			);
-			path = DayCareClient;
-			sourceTree = "<group>";
-		};
-		69EAE7351CA9775600E716D8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				69EAE72A1CA976D400E716D8 /* Assets.xcassets */,
-				69EAE72C1CA976D400E716D8 /* LaunchScreen.storyboard */,
-				69A14A841CB4A5CF0005E88B /* DayCareClient-Bridging-Header.h */,
-				69EAE72F1CA976D400E716D8 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DDCC0558879A8572A39B7B76 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				69CFF49E1CB813FC00E03C32 /* Common.framework */,
-				AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		69EAE71F1CA976D400E716D8 /* DayCareClient */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 69EAE7321CA976D400E716D8 /* Build configuration list for PBXNativeTarget "DayCareClient" */;
-			buildPhases = (
-				69EAE71C1CA976D400E716D8 /* Sources */,
-				69EAE71D1CA976D400E716D8 /* Frameworks */,
-				69EAE71E1CA976D400E716D8 /* Resources */,
-				C07C8202DA2F94D5A66AA4BD /* Embed Pods Frameworks */,
-				6957EEE91CB4115500C7A857 /* ShellScript */,
-				690056AF1CB4BD260090163E /* ShellScript */,
-				69B49CE31CB566AB001099B7 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DayCareClient;
-			productName = DayCareClient;
-			productReference = 69EAE7201CA976D400E716D8 /* DayCareClient.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		69EAE7181CA976D400E716D8 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Tayal, Rishabh";
-				TargetAttributes = {
-					69EAE71F1CA976D400E716D8 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = CEBY93VF85;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
-					};
-				};
-			};
-			buildConfigurationList = 69EAE71B1CA976D400E716D8 /* Build configuration list for PBXProject "DayCareClient" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 69EAE7171CA976D400E716D8;
-			productRefGroup = 69EAE7211CA976D400E716D8 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				69EAE71F1CA976D400E716D8 /* DayCareClient */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		69EAE71E1CA976D400E716D8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				690056B81CB4BF4C0090163E /* LoginViewController.xib in Resources */,
-				69EAE72E1CA976D400E716D8 /* LaunchScreen.storyboard in Resources */,
-				69EAE72B1CA976D400E716D8 /* Assets.xcassets in Resources */,
-				69EAE7291CA976D400E716D8 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		690056AF1CB4BD260090163E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
-		};
-		6957EEE91CB4115500C7A857 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 02d3f7db22ac1a3e538528547a694d5230eb8278 af6ede98bc0742057c556b0ed733e4c57ae435cd7cc81f516bb2b4e456b7e234";
-		};
-		C07C8202DA2F94D5A66AA4BD /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		69EAE71C1CA976D400E716D8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				69EAE7261CA976D400E716D8 /* DiaryViewController.swift in Sources */,
-				690056AC1CB4B7750090163E /* RoutineViewController.swift in Sources */,
-				69EAE7241CA976D400E716D8 /* AppDelegate.swift in Sources */,
-				690056B71CB4BF4C0090163E /* LoginViewController.swift in Sources */,
-				690056AE1CB4B9690090163E /* SubmitRoutineViewController.swift in Sources */,
-				69F82BD71CB4C3D20035E6A9 /* SettingsViewController.swift in Sources */,
-				69F82BDB1CB4CC750035E6A9 /* ClientUser.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		69EAE7271CA976D400E716D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				69EAE7281CA976D400E716D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		69EAE72C1CA976D400E716D8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				69EAE72D1CA976D400E716D8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		69EAE7301CA976D400E716D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		69EAE7311CA976D400E716D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		69EAE7331CA976D400E716D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BEA28516BFFB2D14E3197AB /* Pods-DayCareClient.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				INFOPLIST_FILE = DayCareClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCareClient;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "DayCareClient/DayCareClient-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		69EAE7341CA976D400E716D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F764C5D0379C724DADC7CBAC /* Pods-DayCareClient.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				INFOPLIST_FILE = DayCareClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rtayal.DayCareClient;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "DayCareClient/DayCareClient-Bridging-Header.h";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		69EAE71B1CA976D400E716D8 /* Build configuration list for PBXProject "DayCareClient" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				69EAE7301CA976D400E716D8 /* Debug */,
-				69EAE7311CA976D400E716D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		69EAE7321CA976D400E716D8 /* Build configuration list for PBXNativeTarget "DayCareClient" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				69EAE7331CA976D400E716D8 /* Debug */,
-				69EAE7341CA976D400E716D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 69EAE7181CA976D400E716D8 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0E5C8889C014CBF9A01A4975</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BEA28516BFFB2D14E3197AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-DayCareClient.debug.xcconfig</string>
+			<key>path</key>
+			<string>../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>599A9DA7DD84E8FBB966039E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0E5C8889C014CBF9A01A4975</string>
+				<string>D04F03D4FB89EA47F415401E</string>
+				<string>1BEA28516BFFB2D14E3197AB</string>
+				<string>F764C5D0379C724DADC7CBAC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>690056AB1CB4B7750090163E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RoutineViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>690056AC1CB4B7750090163E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>690056AB1CB4B7750090163E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>690056AD1CB4B9690090163E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SubmitRoutineViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>690056AE1CB4B9690090163E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>690056AD1CB4B9690090163E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>690056AF1CB4BD260090163E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>buildNumber=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "${PROJECT_DIR}/${INFOPLIST_FILE}")
+buildNumber=$(($buildNumber + 1))
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $buildNumber" "${PROJECT_DIR}/${INFOPLIST_FILE}"</string>
+		</dict>
+		<key>690056B51CB4BF4C0090163E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LoginViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>690056B61CB4BF4C0090163E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>LoginViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>690056B71CB4BF4C0090163E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>690056B51CB4BF4C0090163E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>690056B81CB4BF4C0090163E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>690056B61CB4BF4C0090163E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>690056B91CB4BF500090163E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>690056B51CB4BF4C0090163E</string>
+				<string>690056B61CB4BF4C0090163E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Login View Controller</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6957EEE91CB4115500C7A857</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${PODS_ROOT}/Fabric/run" 02d3f7db22ac1a3e538528547a694d5230eb8278 af6ede98bc0742057c556b0ed733e4c57ae435cd7cc81f516bb2b4e456b7e234</string>
+		</dict>
+		<key>69A14A841CB4A5CF0005E88B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DayCareClient-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69B49CE31CB566AB001099B7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string></string>
+			<key>dstSubfolderSpec</key>
+			<string>10</string>
+			<key>files</key>
+			<array>
+				<string>69CFF4A01CB813FC00E03C32</string>
+			</array>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>name</key>
+			<string>Embed Frameworks</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>69CFF48E1CB70F7600E03C32</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>690056AB1CB4B7750090163E</string>
+				<string>690056AD1CB4B9690090163E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Routines View Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69CFF49E1CB813FC00E03C32</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Common.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>69CFF4A01CB813FC00E03C32</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69CFF49E1CB813FC00E03C32</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>CodeSignOnCopy</string>
+					<string>RemoveHeadersOnCopy</string>
+				</array>
+			</dict>
+		</dict>
+		<key>69EAE7171CA976D400E716D8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>69EAE7221CA976D400E716D8</string>
+				<string>69EAE7211CA976D400E716D8</string>
+				<string>599A9DA7DD84E8FBB966039E</string>
+				<string>DDCC0558879A8572A39B7B76</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7181CA976D400E716D8</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Tayal, Rishabh</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>69EAE71F1CA976D400E716D8</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>DevelopmentTeam</key>
+						<string>CEBY93VF85</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.Push</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>69EAE71B1CA976D400E716D8</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>69EAE7171CA976D400E716D8</string>
+			<key>productRefGroup</key>
+			<string>69EAE7211CA976D400E716D8</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>69EAE71F1CA976D400E716D8</string>
+			</array>
+		</dict>
+		<key>69EAE71B1CA976D400E716D8</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>69EAE7301CA976D400E716D8</string>
+				<string>69EAE7311CA976D400E716D8</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>69EAE71C1CA976D400E716D8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>69EAE7261CA976D400E716D8</string>
+				<string>690056AC1CB4B7750090163E</string>
+				<string>69EAE7241CA976D400E716D8</string>
+				<string>690056B71CB4BF4C0090163E</string>
+				<string>690056AE1CB4B9690090163E</string>
+				<string>69F82BD71CB4C3D20035E6A9</string>
+				<string>69F82BDB1CB4CC750035E6A9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>69EAE71D1CA976D400E716D8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C995086F388F5D39578F9F0E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>69EAE71E1CA976D400E716D8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>690056B81CB4BF4C0090163E</string>
+				<string>69EAE72E1CA976D400E716D8</string>
+				<string>69EAE72B1CA976D400E716D8</string>
+				<string>69EAE7291CA976D400E716D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>69EAE71F1CA976D400E716D8</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>69EAE7321CA976D400E716D8</string>
+			<key>buildPhases</key>
+			<array>
+				<string>69EAE71C1CA976D400E716D8</string>
+				<string>69EAE71D1CA976D400E716D8</string>
+				<string>69EAE71E1CA976D400E716D8</string>
+				<string>C07C8202DA2F94D5A66AA4BD</string>
+				<string>6957EEE91CB4115500C7A857</string>
+				<string>690056AF1CB4BD260090163E</string>
+				<string>69B49CE31CB566AB001099B7</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>DayCareClient</string>
+			<key>productName</key>
+			<string>DayCareClient</string>
+			<key>productReference</key>
+			<string>69EAE7201CA976D400E716D8</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>69EAE7201CA976D400E716D8</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DayCareClient.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>69EAE7211CA976D400E716D8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>69EAE7201CA976D400E716D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7221CA976D400E716D8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>69F82BDA1CB4CC750035E6A9</string>
+				<string>69EAE7231CA976D400E716D8</string>
+				<string>690056B91CB4BF500090163E</string>
+				<string>69CFF48E1CB70F7600E03C32</string>
+				<string>69EAE7251CA976D400E716D8</string>
+				<string>69F82BD61CB4C3D20035E6A9</string>
+				<string>69EAE7271CA976D400E716D8</string>
+				<string>69EAE7351CA9775600E716D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DayCareClient</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7231CA976D400E716D8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7241CA976D400E716D8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69EAE7231CA976D400E716D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>69EAE7251CA976D400E716D8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DiaryViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7261CA976D400E716D8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69EAE7251CA976D400E716D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>69EAE7271CA976D400E716D8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>69EAE7281CA976D400E716D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7281CA976D400E716D8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7291CA976D400E716D8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69EAE7271CA976D400E716D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>69EAE72A1CA976D400E716D8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE72B1CA976D400E716D8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69EAE72A1CA976D400E716D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>69EAE72C1CA976D400E716D8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>69EAE72D1CA976D400E716D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE72D1CA976D400E716D8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE72E1CA976D400E716D8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69EAE72C1CA976D400E716D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>69EAE72F1CA976D400E716D8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69EAE7301CA976D400E716D8</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>69EAE7311CA976D400E716D8</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>69EAE7321CA976D400E716D8</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>69EAE7331CA976D400E716D8</string>
+				<string>69EAE7341CA976D400E716D8</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>69EAE7331CA976D400E716D8</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1BEA28516BFFB2D14E3197AB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DayCareClient/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.rtayal.DayCareClient</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>DayCareClient/DayCareClient-Bridging-Header.h</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>69EAE7341CA976D400E716D8</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F764C5D0379C724DADC7CBAC</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Distribution</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Distribution</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DayCareClient/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.rtayal.DayCareClient</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>DayCareClient/DayCareClient-Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>69EAE7351CA9775600E716D8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>69EAE72A1CA976D400E716D8</string>
+				<string>69EAE72C1CA976D400E716D8</string>
+				<string>69A14A841CB4A5CF0005E88B</string>
+				<string>69EAE72F1CA976D400E716D8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69F82BD61CB4C3D20035E6A9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SettingsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69F82BD71CB4C3D20035E6A9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69F82BD61CB4C3D20035E6A9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>69F82BDA1CB4CC750035E6A9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ClientUser.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69F82BDB1CB4CC750035E6A9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69F82BDA1CB4CC750035E6A9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB617C37006FFE1381A735BC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_DayCareClient.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C07C8202DA2F94D5A66AA4BD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>C995086F388F5D39578F9F0E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB617C37006FFE1381A735BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D04F03D4FB89EA47F415401E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DDCC0558879A8572A39B7B76</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>69CFF49E1CB813FC00E03C32</string>
+				<string>AB617C37006FFE1381A735BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F764C5D0379C724DADC7CBAC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-DayCareClient.release.xcconfig</string>
+			<key>path</key>
+			<string>../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>69EAE7181CA976D400E716D8</string>
+</dict>
+</plist>
