@@ -14,6 +14,17 @@ class DCSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(logoutTapped(_:)))
+    }
+    
+    func logoutTapped(sender: AnyObject) {
+        BaseUser.logOutInBackgroundWithBlock { (error: NSError?) in
+            if error == nil {
+                let appDelegate = UIApplication.sharedApplication().delegate as! DCAppDelegate
+                appDelegate.showLoginView()
+            }
+        }
     }
 }
 

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         DCDiary.registerSubclass()
         DCChild.registerSubclass()
-        User.registerSubclass()
+        ClientUser.registerSubclass()
         DCRoutine.registerSubclass()
         
         let config = ParseClientConfiguration {
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(config)
  
-        if User.currentUser() != nil {
+        if ClientUser.currentUser() != nil {
             showTabView()
         } else {
             showLoginView()
@@ -77,6 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        print("Fail")
+        print("Fail to register for notification")
     }
 }

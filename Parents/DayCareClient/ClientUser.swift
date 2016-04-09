@@ -8,8 +8,7 @@
 
 import Parse
 
-class User: PFUser {
+class ClientUser: BaseUser {
     
     @NSManaged var child: DCChild
-    
 }

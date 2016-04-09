@@ -13,6 +13,7 @@ target :Common do
 xcodeproj 'Common/Common.xcodeproj'
 pod 'Parse'
 pod 'FormatterKit'
+pod 'NYTPhotoViewer'
 end
 
 target :CareTaker do
@@ -26,6 +27,8 @@ pod 'Parse'
 pod 'XLForm'
 pod 'MBProgressHUD'
 pod 'FormatterKit'
+pod 'UITextView+Placeholder'
+pod 'NYTPhotoViewer'
 end
 
 target :DayCareClient do
@@ -38,4 +41,5 @@ pod 'Parse'
 pod 'XLForm'
 pod 'MBProgressHUD'
 pod 'FormatterKit'
+pod 'NYTPhotoViewer'
 end

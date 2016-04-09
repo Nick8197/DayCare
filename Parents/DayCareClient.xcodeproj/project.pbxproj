@@ -18,7 +18,7 @@
 		69EAE72B1CA976D400E716D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE72A1CA976D400E716D8 /* Assets.xcassets */; };
 		69EAE72E1CA976D400E716D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EAE72C1CA976D400E716D8 /* LaunchScreen.storyboard */; };
 		69F82BD71CB4C3D20035E6A9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F82BD61CB4C3D20035E6A9 /* SettingsViewController.swift */; };
-		69F82BDB1CB4CC750035E6A9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F82BDA1CB4CC750035E6A9 /* User.swift */; };
+		69F82BDB1CB4CC750035E6A9 /* ClientUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F82BDA1CB4CC750035E6A9 /* ClientUser.swift */; };
 		C995086F388F5D39578F9F0E /* Pods_DayCareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		69EAE72D1CA976D400E716D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69EAE72F1CA976D400E716D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69F82BD61CB4C3D20035E6A9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		69F82BDA1CB4CC750035E6A9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		69F82BDA1CB4CC750035E6A9 /* ClientUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientUser.swift; sourceTree = "<group>"; };
 		AB617C37006FFE1381A735BC /* Pods_DayCareClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayCareClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04F03D4FB89EA47F415401E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F764C5D0379C724DADC7CBAC /* Pods-DayCareClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayCareClient.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DayCareClient/Pods-DayCareClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		69EAE7221CA976D400E716D8 /* DayCareClient */ = {
 			isa = PBXGroup;
 			children = (
-				69F82BDA1CB4CC750035E6A9 /* User.swift */,
+				69F82BDA1CB4CC750035E6A9 /* ClientUser.swift */,
 				69EAE7231CA976D400E716D8 /* AppDelegate.swift */,
 				690056B91CB4BF500090163E /* Login View Controller */,
 				69CFF48E1CB70F7600E03C32 /* Routines View Controllers */,
@@ -285,7 +285,7 @@
 				690056B71CB4BF4C0090163E /* LoginViewController.swift in Sources */,
 				690056AE1CB4B9690090163E /* SubmitRoutineViewController.swift in Sources */,
 				69F82BD71CB4C3D20035E6A9 /* SettingsViewController.swift in Sources */,
-				69F82BDB1CB4CC750035E6A9 /* User.swift in Sources */,
+				69F82BDB1CB4CC750035E6A9 /* ClientUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ class SettingsViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(SettingsViewController.logoutTapped(_:)))
         
-        let user = User.currentUser()
+        let user = ClientUser.currentUser()
         user?.child.fetchIfNeededInBackgroundWithBlock({ (child: PFObject?, error: NSError?) in
             self.childImageView.setImageWithURL(NSURL(string: (user?.child.image)!)!)
             self.childNameLabel.text = user?.child.name
@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController {
     }
     
     func logoutTapped(sender: AnyObject) {
-        User.logOutInBackgroundWithBlock { (error: NSError?) in
+        ClientUser.logOutInBackgroundWithBlock { (error: NSError?) in
             if error == nil {
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 appDelegate.showLoginView()

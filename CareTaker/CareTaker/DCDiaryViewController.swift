@@ -8,10 +8,12 @@
 
 import UIKit
 import Parse
+import NYTPhotoViewer
 
 class DCDiaryViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var postPhotoButton: UIButton!
     
     var dataArray: [DCDiary] = []
     var refreshControl = UIRefreshControl()
@@ -27,6 +29,8 @@ class DCDiaryViewController: UIViewController {
         self.tableView.estimatedRowHeight = 80
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.registerNib(UINib(nibName: "DiaryTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "diaryCell")
+    
+        postPhotoButton.roundView(4)
         
         loadQuery()
     }
@@ -68,5 +72,16 @@ extension DCDiaryViewController: UITableViewDataSource {
 }
 
 extension DCDiaryViewController: UITableViewDelegate {
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let object = dataArray[indexPath.row]
+        let file = object.photo
+        file.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
+            if let data = data {
+                let photo = Photo(imageData: data, attributedCaptionTitle: nil)
+                let photosViewController = NYTPhotosViewController(photos: [photo])
+                self.presentViewController(photosViewController, animated: true, completion: nil)
+            }
+        }
+    }
 }
