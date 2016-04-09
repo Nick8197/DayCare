@@ -37,3 +37,14 @@ extension NSDate {
         return prettyDate
     }
 }
+
+extension String {
+    public func stringIsAllwhiteSpace() -> Bool {
+        let characterSet : NSCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        
+        if(self.stringByTrimmingCharactersInSet(characterSet).characters.count == 0) {
+            return true
+        }
+        return false
+    }
+}

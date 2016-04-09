@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import NYTPhotoViewer
 
 class DiaryViewController: UIViewController {
     
@@ -55,27 +56,26 @@ extension DiaryViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("diaryCell") as? DiaryTableViewCell
-
+        
         let object = dataArray[indexPath.row]
         
         cell?.configure(object)
-        
-//        cell?.textLabel?.text = object.child.name
-//        cell?.detailTextLabel?.text = object.date.prettyDate()
-//        
-//        let file = object.photo
-//        file.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) in
-//            if let imageData = imageData {
-//                cell?.imageView?.image = UIImage(data: imageData)
-//            } else {
-//                cell?.imageView?.image = nil
-//            }
-//        }
         
         return cell!
     }
 }
 
 extension DiaryViewController: UITableViewDelegate {
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let object = dataArray[indexPath.row]
+        let file = object.photo
+        file.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
+            if let data = data {
+                let photo = Photo(imageData: data, attributedCaptionTitle: nil)
+                let photosViewController = NYTPhotosViewController(photos: [photo])
+                self.presentViewController(photosViewController, animated: true, completion: nil)
+            }
+        }
+    }
 }
