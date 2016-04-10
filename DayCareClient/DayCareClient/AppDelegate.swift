@@ -73,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let installation = PFInstallation.currentInstallation()
         installation.setDeviceTokenFromData(deviceToken)
         installation.channels = ["channel"]
+        installation["owner"] = ClientUser.currentUser()
         installation.saveEventually()
     }
     
