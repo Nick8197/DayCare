@@ -18,10 +18,8 @@ end
 
 target :DayCare do
 xcodeproj 'DayCare/DayCare.xcodeproj'
-
 pod 'Fabric'
 pod 'Crashlytics'
-
 pod 'AFNetworking'
 pod 'Parse'
 pod 'XLForm'
@@ -29,17 +27,18 @@ pod 'MBProgressHUD'
 pod 'FormatterKit'
 pod 'UITextView+Placeholder'
 pod 'NYTPhotoViewer'
+pod 'DZNEmptyDataSet'
 end
 
 target :DayCareClient do
 xcodeproj 'DayCareClient/DayCareClient.xcodeproj'
 pod 'Fabric'
 pod 'Crashlytics'
-
 pod 'AFNetworking'
 pod 'Parse'
 pod 'XLForm'
 pod 'MBProgressHUD'
 pod 'FormatterKit'
 pod 'NYTPhotoViewer'
+pod 'DZNEmptyDataSet'
 end

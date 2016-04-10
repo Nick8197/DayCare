@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import DZNEmptyDataSet
 
 class DCRoutineViewController: UIViewController {
 
@@ -31,6 +32,11 @@ class DCRoutineViewController: UIViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 60
         self.tableView.registerNib(UINib(nibName: "RoutineTableViewCell", bundle: AppConstants.CommonBundle), forCellReuseIdentifier: "routineCell")
+        self.tableView.tableFooterView = UIView()
+        
+        self.tableView.emptyDataSetSource = self
+        self.tableView.emptyDataSetDelegate = self
+        
         loadRoutineObjects()
     }
     
@@ -52,7 +58,7 @@ class DCRoutineViewController: UIViewController {
         })
     }
     
-    @IBAction func submitRoutineTapped(sender: AnyObject) {
+    @IBAction func submitRoutineTapped(sender: AnyObject?) {
         let submitReportVC = storyboard?.instantiateViewControllerWithIdentifier("DCSubmitRoutineViewController") as! DCSubmitRoutineViewController
         submitReportVC.child = child
         self.navigationController?.pushViewController(submitReportVC, animated: true)
@@ -76,4 +82,18 @@ extension DCRoutineViewController: UITableViewDataSource {
 
 extension DCRoutineViewController: UITableViewDelegate {
     
+}
+
+extension DCRoutineViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        return NSAttributedString(string: "No routine submitted")
+    }
+    
+    func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
+        return NSAttributedString(string: "Submit Routine", attributes: [NSForegroundColorAttributeName: UIColor.blueColor()])
+    }
+    
+    func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
+        submitRoutineTapped(nil)
+    }
 }
