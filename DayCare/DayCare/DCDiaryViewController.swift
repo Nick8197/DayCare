@@ -15,7 +15,7 @@ class DCDiaryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var postPhotoButton: UIButton!
     
-    var dataArray: [DCDiary] = []
+    var dataArray: [NSDate: [DCDiary]] = [:]
     var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -43,8 +43,18 @@ class DCDiaryViewController: UIViewController {
         query?.orderByDescending("createdAt")
         query?.findObjectsInBackgroundWithBlock({ (objects: [PFObject]?, error: NSError?) in
             self.refreshControl.endRefreshing()
-            if let objects = objects {
-                self.dataArray = objects as! [DCDiary]
+            if let objects = objects as? [DCDiary] {
+                for object in objects {
+//                    self.dataArray.updateValue(object, forKey: object.date)
+                     var arr = self.dataArray[object.date]
+                    if arr == nil {
+                        arr = []
+                    }
+                    arr?.append(object)
+//                    self.dataArray[object.date]?.append(object)
+                    self.dataArray.updateValue(arr!, forKey: object.date)
+                }
+//                self.dataArray = objects as! [DCDiary]
                 self.tableView.reloadData()
             }
         })
@@ -57,15 +67,24 @@ class DCDiaryViewController: UIViewController {
 }
 
 extension DCDiaryViewController: UITableViewDataSource {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        let count = dataArray.keys.count
+        return dataArray.keys.count
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
+        let arr = dataArray
+            print(arr)
+            let count = dataArray[arr]?.count
+        return count
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("diaryCell") as! DiaryTableViewCell
         
-        let obj = dataArray[indexPath.row]
-        cell.configure(obj)
+//        let obj = dataArray[indexPath.row]
+//        cell.configure(obj)
         
         return cell
     }
@@ -74,14 +93,14 @@ extension DCDiaryViewController: UITableViewDataSource {
 extension DCDiaryViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let object = dataArray[indexPath.row]
-        let file = object.photo
-        file.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
-            if let data = data {
-                let photo = Photo(imageData: data, attributedCaptionTitle: NSAttributedString(string: object.caption, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()]))
-                let photosViewController = NYTPhotosViewController(photos: [photo])
-                self.presentViewController(photosViewController, animated: true, completion: nil)
-            }
-        }
+//        let object = dataArray[indexPath.row]
+//        let file = object.photo
+//        file.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) in
+//            if let data = data {
+//                let photo = Photo(imageData: data, attributedCaptionTitle: NSAttributedString(string: object.caption, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()]))
+//                let photosViewController = NYTPhotosViewController(photos: [photo])
+//                self.presentViewController(photosViewController, animated: true, completion: nil)
+//            }
+//        }
     }
 }
